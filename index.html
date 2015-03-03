@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tecnoquímicas Farma</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+    	<div class="search">
+        	<input type="text">
+            <a href="#"><img src="images/buscador.png"></a>
+        </div>
+        <div class="register">
+        	<a href="#">Quiénes Somos</a>
+            <a href="#">Contáctenos</a>
+            <a href="#">País <img src="images/co.png" /></a>
+            <div>
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
+            </div>
+        </div>
+        <div id="popUpInicio">
+            <select>
+                <option disabled selected>Seleccione el tipo de documento</option>
+                <option>Cédula de Ciudadanía Colombiana</option>
+                <option>Cédula de Extranjería</option>
+                <option>Documento provisional Colombiano</option>
+            </select>
+            <input type="text" placeholder="Identificación"/>
+            <input type="text" placeholder="Contraseña" />
+            <div class="boton_ingresar">Ingresar</div>
+            <div class="check_recordar"><input type="checkbox" value="">Recordar su contraseña</div>
+            <div class="links_inicio"><a href="">¿Olvido su contraseña?</a><a href="">Registrarse</a></div>
+        </div>
+    </header>
+    <section class="section_menu">
+        <ul>
+            <li><img id="home" src="images/home.png" /><img id="menu" src="images/menu.png" />TQFarma</li>
+            <li>Vademécum TQ</li>
+            <li>Vademécum MK</li>
+            <li>Oftalmológico TQ</li>
+            <li>Biblioteca Científica</li>
+            <li>Visita Online</li>
+            <li>Red Cardiolat</li>
+            <li>Espacio Otro Item</li>
+        </ul>
+    </section>
+    <section class="presentation">
+        <img id="bannerNormal" src="images/Banner.jpg" />
+        <img id="bannerMovil" src="images/banner-movil.jpg" />
+        <h1>Bienvenido al Portal Farmacéutico de Tecnoquímicas</h1>
+        <h2>Nos agrada poner a su servicio este sitio exclusivo dirigido a los profesionales de la salud en sus diversas especialidades.</h2>
+    </section>
+    <section class="section-vademecums">
+        <div class="vademecum">
+            <img src="images/img-vademecum-tq.png" />
+            <div class="text_vademecum">
+                Vademécum
+                <img src="images/logo-tq.png" />
+            </div>
+        </div>
+        <div class="vademecum">
+            <img src="images/img-vademecum-mk.png" />
+            <div class="text_vademecum">
+                Vademécum
+                <img src="images/logo-mk.png" />
+            </div>
+        </div>
+        <div class="vademecum">
+            <img src="images/img-vademecum-ofta.png" />
+            <div class="text_vademecum">
+                Vademécum Oftalmológicos
+            </div>
+        </div>
+    </section>
+    <section class="section_news">
+        <h3>Noticias de interés</h3>
+        <img src="images/separator.png" />
+        <div class="noticias_interes">
+            <img src="images/noti_investigacion.jpg" />
+            <div class="text_noticias">
+                <h4>Investigación: un compromiso</h4>
+                <p class="fecha">Julio 25,  2014</p>
+                <p class="parrafo">Durante los últimos años Tecnoquímicas ha fortalecido de manera notable la vocación innovadora que la impulsa a transformar nuevas ideas en productos totalmente confiables...</p>
+            </div>
+        </div>
+        <div class="noticias_interes" id="segunda-interes">
+            <img src="images/noti_agua.jpg" />
+            <div class="text_noticias">
+                <h4>Cali prepara estudio clínico para producir “nano agua”</h4>
+                <p class="fecha">Enero 25,  2014</p>
+                <p class="parrafo">Cali se convertirá en el centro de estudio y desarrollo de la más reciente investigación que adelanta el científico colombiano Rodolfo Llinás...</p>
+            </div>
+        </div>
+    </section>
+    <section class="section_actualidad">
+        <h3>Noticias de actualidad en español</h3>
+        <img src="images/separator.png" />
+        <div id="container_actualidad">
+            <img src="images/left_arrow.png" id="flecha_izquierda" />
+            <div id="tira_actualidad">
+                <div class="grupo_noticias">
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_cardiologia.png" />
+                        <h4>Cardiología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_endocrino.png" />
+                        <h4>Endocrinología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gastro.png" />
+                        <h4>Gastroenterología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gineco.png" />
+                        <h4>Ginecología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                </div>
+                <div class="grupo_noticias">
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_cardiologia.png" />
+                        <h4>Medicina General</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_endocrino.png" />
+                        <h4>Medicina Interna</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gastro.png" />
+                        <h4>Neurología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gineco.png" />
+                        <h4>Odontología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                </div>
+                <div class="grupo_noticias">
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_cardiologia.png" />
+                        <h4>Oftalmología</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_endocrino.png" />
+                        <h4>ORTOPEDIA</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gastro.png" />
+                        <h4>OTORRINOLARINGOLOGÍA</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gineco.png" />
+                        <h4>PEDIATRÍA</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                </div>
+                <div class="grupo_noticias">
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_cardiologia.png" />
+                        <h4>PSIQUIATRÍA</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_endocrino.png" />
+                        <h4>REUMATOLOGÍA</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                    <div class="noticias_actualidad">
+                        <img src="images/actualidad_gastro.png" />
+                        <h4>UROLOGÍA</h4>
+                        <p class="fecha">Julio 25,  2014</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/right_arrow.png" id="flecha_derecha" />
+        </div>
+    </section>
+    <section class="section_ovid">
+        <h3>Libros <span>Ovid</span> destacados</h3>
+        <img src="images/separator.png" />
+        <img src="images/left_arrow.png" id="flecha_izquierda_ovid" />
+        <div class="libros_ovid" id="0">
+            <img src="images/libros_diabetes.jpg" />
+            <h4>diabetes mellitud</h4>
+        </div>
+        <div class="libros_ovid" id="1">
+            <img src="images/libros_anatomia.jpg" />
+            <h4>anatomía y patologías ilustradas</h4>
+        </div>
+        <div class="libros_ovid" id="2">
+            <img src="images/libros_clinica.jpg" />
+            <h4>5 minutos de consulta clínica</h4>
+        </div>
+        <div class="libros_ovid" id="3">
+            <img src="images/libros_investigaciones.jpg" />
+            <h4>diseño de investigaciónes clínicas</h4>
+        </div>
+        <img src="images/right_arrow.png" id="flecha_derecha_ovid" />
+    </section>
+    <footer>
+        <div class="footer_menu">
+            <ul>
+                <li>Home</li>
+                <li>Vademécum Tecnoquímicas</li>
+                <li>Vademécum MK</li>
+                <li>Oftalmológicos TQ</li>
+                <li>Biblioteca Científica</li>
+            </ul>
+        </div>
+        <div class="footer_somos">
+            <ul>
+                <li>Quiénes Somos</li>
+                <li>Contáctenos</li>
+            </ul>
+        </div>
+        <div class="footer_act">
+            <ul>
+                <li>Actualizar datos</li>
+            </ul>
+        </div>
+        <div class="footer_copy">
+            <ul>
+                <li>Copyright (c) 2013 Tecnoquímicas</li>
+                <li>Ingresar</li>
+                <li>Mayor información www.tecnoquimicas.com</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+</html>
