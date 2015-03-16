@@ -245,6 +245,7 @@ header{
 	margin: 0 auto;
 	text-align: center;
 	font-size: 14px;
+	padding: 0;
 }
 
 .section_menu > ul > li{
