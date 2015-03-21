@@ -65,17 +65,8 @@ function positionInteracciones(){
     if($(window).width() < 768){
         $("#rotatorInteracciones").appendTo(".tercera-columna");
         $("#pauta").appendTo(".tercera-columna");
-    }else{
-        $("#rotatorInteracciones").appendTo(".tercera-columna");
-        $("#pauta").appendTo(".tercera-columna");
+    }else if($(window).width() >= 768){
+        $("#rotatorInteracciones").appendTo(".primera-columna");
+        $("#pauta").appendTo(".primera-columna");
     }
 }
-
-/*$(".has-sub").each(function(index){
-    console.log(index+": "+$(this).css("height"));
-    var altura = $(this).css("height");
-    altura = altura/2;
-    //document.styleSheets[0].addRule($(this)+'>a::after','top: '+altura+';');
-    document.styleSheets[0].addRule($('a::after',this),'top: '+altura+';');
-});
-document.styleSheets[0].addRule('#cssmenu > ul .has-sub>a::after','top: 21px;');*/
