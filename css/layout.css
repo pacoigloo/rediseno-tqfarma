@@ -333,10 +333,16 @@ li > #menu{
 }
 
 /*Presentation*/
-.presentation > img{
+.presentation > img, .presentation > #bannerPrincipal{
 	width: 90%;
 	margin: 0 auto;
 	max-width: 948px;
+}
+.presentation > #bannerPrincipal img{
+	width: 100%;
+}
+#bannerPrincipal{
+	position: relative;
 }
 #bannerNormal{
 	display: block;
