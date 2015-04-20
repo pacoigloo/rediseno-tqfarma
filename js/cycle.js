@@ -7,13 +7,13 @@
  * http://jquery.malsup.com/license.html
  * Requires: jQuery v1.3.2 or later
  */
-;(function($, undefined) {
+!function($, t) {
 "use strict";
 
 var ver = '2.9999.5';
 
 // if $.support is not defined (pre jQuery 1.3) add what I need
-if ($.support === undefined) {
+if ($.support === t) {
 	$.support = {
 		opacity: !($.browser.msie)
 	};
@@ -22,15 +22,17 @@ if ($.support === undefined) {
 function debug(s) {
 	if ($.fn.cycle.debug)
 		log(s);
-}		
+}	
+
 function log() {
+	
 	if (window.console && console.log)
 		console.log('[cycle] ' + Array.prototype.join.call(arguments,' '));
 }
 $.expr[':'].paused = function(el) {
+	
 	return el.cyclePause;
 };
-
 
 // the options arg can be...
 //   a number  - indicates an immediate transition should occur to the given slide index
@@ -43,10 +45,12 @@ $.expr[':'].paused = function(el) {
 //	 that the resume should occur immediately (not wait for next timeout)
 
 $.fn.cycle = function(options, arg2) {
+
 	var o = { s: this.selector, c: this.context };
 
 	// in 1.3+ we can fix mistakes with the ready state
 	if (this.length === 0 && options != 'stop') {
+			
 		if (!$.isReady && o.s) {
 			log('DOM not ready, queuing slideshow');
 			$(function() {
@@ -58,19 +62,23 @@ $.fn.cycle = function(options, arg2) {
 		log('terminating; zero elements found by selector' + ($.isReady ? '' : ' (DOM not ready)'));
 		return this;
 	}
-
+	
 	// iterate the matched nodeset
 	return this.each(function() {
+		
 		var opts = handleArguments(this, options, arg2);
 		if (opts === false)
 			return;
-
+	
 		opts.updateActivePagerLink = opts.updateActivePagerLink || $.fn.cycle.updateActivePagerLink;
 		
 		// stop existing slideshow for this container (if there is one)
 		if (this.cycleTimeout)
+		
 			clearTimeout(this.cycleTimeout);
+			
 		this.cycleTimeout = this.cyclePause = 0;
+			
 		this.cycleStop = 0; // issue #108
 
 		var $cont = $(this);
@@ -78,18 +86,21 @@ $.fn.cycle = function(options, arg2) {
 		var els = $slides.get();
 
 		if (els.length < 2) {
+			
 			log('terminating; too few slides: ' + els.length);
 			return;
 		}
 
 		var opts2 = buildOptions($cont, $slides, els, opts, o);
+		
 		if (opts2 === false)
-			return;
-
+			 return;
+			
 		var startTime = opts2.continuous ? 10 : getTimeout(els[opts2.currSlide], els[opts2.nextSlide], opts2, !opts2.backwards);
-
+		
 		// if it's an auto slideshow, kick it off
 		if (startTime) {
+			
 			startTime += (opts2.delay || 0);
 			if (startTime < 10)
 				startTime = 10;
@@ -101,6 +112,7 @@ $.fn.cycle = function(options, arg2) {
 
 function triggerPause(cont, byHover, onPager) {
 	var opts = $(cont).data('cycle.opts');
+	
 	var paused = !!cont.cyclePause;
 	if (paused && opts.paused)
 		opts.paused(cont, opts, byHover, onPager);
@@ -110,13 +122,14 @@ function triggerPause(cont, byHover, onPager) {
 
 // process the args that were passed to the plugin fn
 function handleArguments(cont, options, arg2) {
+	
 	if (cont.cycleStop === undefined)
 		cont.cycleStop = 0;
 	if (options === undefined || options === null)
 		options = {};
 	if (options.constructor == String) {
 		switch(options) {
-		case 'destroy':
+		case 'destroy': 
 		case 'stop':
 			var opts = $(cont).data('cycle.opts');
 			if (!opts)
@@ -132,6 +145,7 @@ function handleArguments(cont, options, arg2) {
 				destroy(cont, opts);
 			return false;
 		case 'toggle':
+			
 			cont.cyclePause = (cont.cyclePause === 1) ? 0 : 1;
 			checkInstantResume(cont.cyclePause, arg2, cont);
 			triggerPause(cont);
@@ -141,6 +155,7 @@ function handleArguments(cont, options, arg2) {
 			triggerPause(cont);
 			return false;
 		case 'resume':
+			
 			cont.cyclePause = 0;
 			checkInstantResume(false, arg2, cont);
 			triggerPause(cont);
@@ -157,22 +172,28 @@ function handleArguments(cont, options, arg2) {
 		default:
 			options = { fx: options };
 		}
+		
 		return options;
 	}
 	else if (options.constructor == Number) {
+		
 		// go to the requested slide
 		var num = options;
 		options = $(cont).data('cycle.opts');
 		if (!options) {
 			log('options not found, can not advance slide');
 			return false;
+			
 		}
 		if (num < 0 || num >= options.elements.length) {
 			log('invalid slide index: ' + num);
 			return false;
+			
 		}
+		
 		options.nextSlide = num;
 		if (cont.cycleTimeout) {
+			console.log('options');
 			clearTimeout(cont.cycleTimeout);
 			cont.cycleTimeout = 0;
 		}
@@ -182,7 +203,7 @@ function handleArguments(cont, options, arg2) {
 		return false;
 	}
 	return options;
-	
+
 	function checkInstantResume(isPaused, arg2, cont) {
 		if (!isPaused && arg2 === true) { // resume now!
 			var options = $(cont).data('cycle.opts');
@@ -299,7 +320,8 @@ function buildOptions($cont, $slides, els, options, o) {
 	var first = opts.startingSlide;
 
 	// set position and zIndex on all the slides
-	$slides.css({position: 'absolute', top:0, left:0}).hide().each(function(i) {
+	$slides.css({position: 'absolute', top:0, left:0 }).hide().each(function(i) {
+		
 		var z;
 		if (opts.backwards)
 			z = first ? i <= first ? els.length + (i-first) : first-i : els.length-i;
@@ -307,11 +329,11 @@ function buildOptions($cont, $slides, els, options, o) {
 			z = first ? i >= first ? els.length - (i-first) : first-i : els.length-i;
 		$(this).css('z-index', z);
 	});
-
+	
 	// make sure first slide is visible
 	$(els[first]).css('opacity',1).show(); // opacity bit needed to handle restart use case
 	removeFilter(els[first], opts);
-
+	console.log(opts.height + "-" + opts.width);
 	// stretch slides
 	if (opts.fit) {
 		if (!opts.aspect) {
@@ -319,18 +341,23 @@ function buildOptions($cont, $slides, els, options, o) {
 	            $slides.width(opts.width);
 	        if (opts.height && opts.height != 'auto')
 	            $slides.height(opts.height);
+	            
+	            
 		} else {
 			$slides.each(function(){
 				var $slide = $(this);
 				var ratio = (opts.aspect === true) ? $slide.width()/$slide.height() : opts.aspect;
 				if( opts.width && $slide.width() != opts.width ) {
-					$slide.width( opts.width );
+					$slide.width( opts.width);
 					$slide.height( opts.width / ratio );
+					
 				}
 
 				if( opts.height && $slide.height() < opts.height ) {
+					
 					$slide.height( opts.height );
 					$slide.width( opts.height * ratio );
+					
 				}
 			});
 		}
@@ -372,7 +399,7 @@ function buildOptions($cont, $slides, els, options, o) {
 			maxh = h > maxh ? h : maxh;
 		}
 		if (maxw > 0 && maxh > 0)
-			$cont.css({width:maxw+'px',height:maxh+'px'});
+			$cont.css({width:'100%',height:maxh+'px'});
 	}
 
 	var pauseFlag = false;  // https://github.com/malsup/cycle/issues/44
@@ -393,18 +420,18 @@ function buildOptions($cont, $slides, els, options, o) {
 	// apparently a lot of people use image slideshows without height/width attributes on the images.
 	// Cycle 2.50+ requires the sizing info for every slide; this block tries to deal with that.
 	var requeue = false;
-	options.requeueAttempts = options.requeueAttempts || 0;
+	//options.requeueAttempts = options.requeueAttempts || 0;
 	$slides.each(function() {
 		// try to get height/width of each slide
 		var $el = $(this);
 		this.cycleH = (opts.fit && opts.height) ? opts.height : ($el.height() || this.offsetHeight || this.height || $el.attr('height') || 0);
 		this.cycleW = (opts.fit && opts.width) ? opts.width : ($el.width() || this.offsetWidth || this.width || $el.attr('width') || 0);
-
-		/*if ( $el.is('img') ) {
+		
+		if ( $el.is('img') ) {
 			// sigh..  sniffing, hacking, shrugging...  this crappy hack tries to account for what browsers do when
 			// an image is being downloaded and the markup did not include sizing info (height/width attributes);
 			// there seems to be some "default" sizes used in this situation
-			var loadingIE	= ($.browser.msie  && this.cycleW == 28 && this.cycleH == 30 && !this.complete);
+			/*var loadingIE	= ($.browser.msie  && this.cycleW == 28 && this.cycleH == 30 && !this.complete);
 			var loadingFF	= ($.browser.mozilla && this.cycleW == 34 && this.cycleH == 19 && !this.complete);
 			var loadingOp	= ($.browser.opera && ((this.cycleW == 42 && this.cycleH == 19) || (this.cycleW == 37 && this.cycleH == 17)) && !this.complete);
 			var loadingOther = (this.cycleH === 0 && this.cycleW === 0 && !this.complete);
@@ -419,8 +446,8 @@ function buildOptions($cont, $slides, els, options, o) {
 				else {
 					log('could not determine size of image: '+this.src, this.cycleW, this.cycleH);
 				}
-			}
-		}*/
+			}*/
+		}
 		return true;
 	});
 
@@ -511,8 +538,10 @@ function saveOriginalOpts(opts) {
 
 function supportMultiTransitions(opts) {
 	var i, tx, txs = $.fn.cycle.transitions;
+	
 	// look for multiple effects
 	if (opts.fx.indexOf(',') > 0) {
+		
 		opts.multiFx = true;
 		opts.fxs = opts.fx.replace(/\s*/g,'').split(',');
 		// discard any bogus effect names
@@ -525,13 +554,16 @@ function supportMultiTransitions(opts) {
 				i--;
 			}
 		}
+		
 		// if we have an empty list then we threw everything away!
 		if (!opts.fxs.length) {
 			log('No valid transitions named; slideshow terminating.');
 			return false;
 		}
+		
 	}
 	else if (opts.fx == 'all') {  // auto-gen the list of transitions
+	
 		opts.multiFx = true;
 		opts.fxs = [];
 		for (var p in txs) {
@@ -539,10 +571,13 @@ function supportMultiTransitions(opts) {
 				tx = txs[p];
 				if (txs.hasOwnProperty(p) && $.isFunction(tx))
 					opts.fxs.push(p);
+					
 			}
 		}
+		
 	}
 	if (opts.multiFx && opts.randomizeEffects) {
+		
 		// munge the fxs array to make effect selection random
 		var r1 = Math.floor(Math.random() * 20) + 30;
 		for (i = 0; i < r1; i++) {
@@ -552,11 +587,13 @@ function supportMultiTransitions(opts) {
 		debug('randomized fx sequence: ',opts.fxs);
 	}
 	return true;
+	
 }
 
 // provide a mechanism for adding slides after the slideshow has started
 function exposeAddSlide(opts, els) {
 	opts.addSlide = function(newSlide, prepend) {
+		
 		var $s = $(newSlide), s = $s[0];
 		if (!opts.autostopCount)
 			opts.countdown++;
@@ -590,7 +627,7 @@ function exposeAddSlide(opts, els) {
 		s.cycleW = (opts.fit && opts.width) ? opts.width : $s.width();
 
 		$s.css(opts.cssBefore);
-
+		
 		if (opts.pager || opts.pagerAnchorBuilder)
 			$.fn.cycle.createPagerAnchor(els.length-1, s, $(opts.pager), els, opts);
 
@@ -1036,7 +1073,7 @@ $.fn.cycle.defaults = {
     fit:              0,        // force slides to fit container
     fx:               'fade',   // name of transition effect (or comma separated names, ex: 'fade,scrollUp,shuffle')
     fxFn:             null,     // function used to control the transition: function(currSlideElement, nextSlideElement, options, afterCalback, forwardFlag)
-    height:           'auto',   // container height (if the 'fit' option is true, the slides will be set to this height as well)
+    height:           null,   // container height (if the 'fit' option is true, the slides will be set to this height as well)
     manualTrump:      true,     // causes manual transition to stop an active transition instead of being ignored
     metaAttr:         'cycle',  // data- attribute that holds the option data for the slideshow
     next:             null,     // element, jQuery object, or jQuery selector string for the element to use as event trigger for next slide
@@ -1067,10 +1104,10 @@ $.fn.cycle.defaults = {
     timeout:          4000,     // milliseconds between slide transitions (0 to disable auto advance)
     timeoutFn:        null,     // callback for determining per-slide timeout value:  function(currSlideElement, nextSlideElement, options, forwardFlag)
     updateActivePagerLink: null,// callback fn invoked to update the active pager link (adds/removes activePagerClass style)
-    width:            null      // container width (if the 'fit' option is true, the slides will be set to this width as well)
+    width:            'auto'      // container width (if the 'fit' option is true, the slides will be set to this width as well)
 };
 
-})(jQuery);
+}(jQuery);
 
 
 /*!
@@ -1091,7 +1128,7 @@ $.fn.cycle.defaults = {
 // transitions. To save file size feel free to remove any of these that you
 // don't need.
 //
-$.fn.cycle.transitions.none = function($cont, $slides, opts) {
+/*$.fn.cycle.transitions.none = function($cont, $slides, opts) {
 	opts.fxFn = function(curr,next,opts,after){
 		$(next).show();
 		$(curr).hide();
@@ -1404,7 +1441,7 @@ $.fn.cycle.transitions.growY = function($cont, $slides, opts) {
 	});
 	opts.cssBefore.height = 0;
 	opts.cssBefore.left = 0;
-};
+};*/
 
 // curtainX - squeeze in both edges horizontally
 $.fn.cycle.transitions.curtainX = function($cont, $slides, opts) {
@@ -1420,7 +1457,7 @@ $.fn.cycle.transitions.curtainX = function($cont, $slides, opts) {
 	opts.cssBefore.width = 0;
 };
 // curtainY - squeeze in both edges vertically
-$.fn.cycle.transitions.curtainY = function($cont, $slides, opts) {
+/*$.fn.cycle.transitions.curtainY = function($cont, $slides, opts) {
 	opts.before.push(function(curr, next, opts) {
 		$.fn.cycle.commonReset(curr,next,opts,true,false,true);
 		opts.cssBefore.top = next.cycleH/2;
@@ -1540,6 +1577,6 @@ $.fn.cycle.transitions.wipe = function($cont, $slides, opts) {
 	$.extend(opts.cssBefore, { display: 'block', opacity: 1, top: 0, left: 0 });
 	opts.animIn	   = { left: 0 };
 	opts.animOut   = { left: 0 };
-};
+};*/
 
 })(jQuery);
