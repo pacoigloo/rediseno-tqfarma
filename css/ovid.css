@@ -6,23 +6,7 @@
     margin: 0 auto;
     max-width: 948px;
 }
-.miga-de-pan > *{
-    display: inline-block;
-    color: #39afe6;
-    padding: 1vw 0.1vw;
-    vertical-align: middle;
-}
-.miga-de-pan > div:first-child{
-    padding-left: 0;
-}
-.miga-de-pan > img{
-    padding: 0;
-}
-@media (min-width: 320px) and (max-width: 767px){
-    .miga-de-pan{
-        display: none;
-    }
-}
+
 /*Layout central*/
 .primera-columna, .columna-central, .tercera-columna{
     display: inline-block;

@@ -1,0 +1,66 @@
+﻿.product-link {
+    color: #348dce;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 11px 20px;
+}
+
+.products-list {
+    list-style: none;    
+}
+
+.product-item {
+    list-style: none;
+    padding: 5px;
+}
+
+.product-bullet{
+    background-image : url("../images/flecha-miga.png");
+    background-repeat: no-repeat;     
+}
+
+.news-link {
+    color: #348dce;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 11px 20px;
+}
+
+.news-list {
+    list-style: none;   
+    margin-top:120px; 
+}
+
+.news-item {
+    list-style: none;
+    padding: 5px;
+}
+
+.news-bullet{
+    background-image : url("../images/flecha-miga.png");
+    background-repeat: no-repeat;     
+}
+
+#cssmenu > ul li{
+    z-index:1000;
+}
+/*MIGA DE PAN*/
+.miga-de-pan > *{
+    display: inline-block;
+    color: #39afe6;
+    padding: 1vw 0.1vw;
+    vertical-align: middle;
+}
+.miga-de-pan > div:first-child{
+    padding-left: 0;
+}
+.miga-de-pan > img{
+    padding: 0;
+}
+@media (min-width: 320px) and (max-width: 767px){
+    .miga-de-pan{
+        display: none;
+    }
+}

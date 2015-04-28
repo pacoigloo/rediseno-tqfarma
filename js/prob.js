@@ -1,5 +1,6 @@
 $(document).ready(function () {
     
+   
     //actualidad();
     $("#flecha_izquierda").unbind().click(function(){
        movimiento_flechas("left");
@@ -27,6 +28,46 @@ $(document).ready(function () {
 $(window).load(function () {
     alturaOvid();
 });
+
+    function showDialog(){
+         var x = document.getElementById("popUpCertificacion");
+         x.show();
+         $(".coverPopup").show();
+         //var titulo=document.getElementById("bienvenidaPop");
+         //titulo.style.fontSize ="24px";
+         
+    }
+    function closeDialog() { 
+        var x = document.getElementById("popUpCertificacion"); 
+        x.close(); 
+        $(".coverPopup").hide();
+    } 
+     function showDialogNotifica(){
+         var y = document.getElementById("popUpNotifica");
+         y.show(); 
+         $(".coverPopup").show();
+         //var titulo=document.getElementById("bienvenidaPop");
+         //titulo.style.fontSize ="24px";
+         
+    }
+    function closeDialogNotifica() { 
+        var u = document.getElementById("popUpNotifica"); 
+        u.close(); 
+        $(".coverPopup").hide();
+    } 
+    function showDialogRecuperacion(){
+         var z = document.getElementById("popUpRegistro");
+         z.show(); 
+         $(".coverPopup").show();
+         //var titulo=document.getElementById("bienvenidaPop");
+         //titulo.style.fontSize ="24px";
+         
+    }
+    function closeDialogRecuperacion() { 
+        var t = document.getElementById("popUpRegistro"); 
+        t.close(); 
+        $(".coverPopup").hide();
+    } 
 
 function actualidad(){
     var ancho_actualidad = $("#container_actualidad").width();

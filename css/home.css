@@ -214,6 +214,17 @@
 	text-transform: uppercase;
 	color: #000;
 	font-size: 0.8vw;
+    
+    
+}
+
+.section_actualidad > #container_actualidad .noticias_actualidad > h4 a{
+	margin: 0;
+	font-family: 'Open sans Bold';
+	text-transform: uppercase;
+	color: #000;
+	font-size: 0.8vw;
+    text-decoration:none;
 }
 .section_actualidad > #container_actualidad .noticias_actualidad > p{
 	margin: 0;

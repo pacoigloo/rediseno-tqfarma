@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tecnoquímicas Farma</title>
     <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<header>
+<!--	<header>
     	<div class="search">
         	<input type="text">
             <a href="#"><img src="images/buscador.png" alt="buscador"></a>
@@ -17,9 +18,8 @@
             <a href="#">Contáctenos</a>
             <a href="#">País <img src="images/co.png" alt="colombia"/></a>
             <div>
-                <div class="header-userName">Nombre Usuario</div>
-                <input class="sessionButton" type="button" id="initSession" value="Cerrar Sesión">
-                <!--<input class="registerButton" type="button" value="Registrarse">-->
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
             </div>
         </div>
         <div id="popUpInicio">
@@ -239,9 +239,59 @@
                 <li>Mayor información www.tecnoquimicas.com</li>
             </ul>
         </div>
-    </footer>
+    </footer>-->
+    <button onclick="showDialog()">Entrar</button>
+    <button onclick="showDialogNotifica()">Notificacion</button>
+    <button onclick="showDialogRecuperacion()">Recuperacion</button>
+    <div class="coverPopup"></div>
+    <dialog id="popUpCertificacion" class="popDialog" >
+        <img class="cerrarPopUp" src="images/cerrarPop.png" onclick="closeDialog()"></img>
+        <div id="popCertifica" class="divTilPopUp">
+            <h1 class="tituloPop">Bienvenido al Portal Farmacéutico de Tecnoquímicas</h1>
+            <h4 id="subTitulo">Esta información es exclusiva para médicos u odontólogos profesionales </h4>
+        </div>
+        <div id="certificaContenido" class="contenidoPop">
+            <div class="panelTexto">
+                <input class="textoPop" type="checkbox" name="certificacion" value="1">Certifíco que soy médico u odontólogo
+            </div>
+                <button class="confirmaBtn" onclick="closeDialog()">Entrar</button>
+                <img class="imgTq" src="images/tqLogo-PopUp.jpg"></img>
+        </div>
+    </dialog>
+    <dialog id="popUpNotifica" class="popDialog" >
+        <img class="cerrarPopUp" src="images/cerrarPop.png" onclick="closeDialogNotifica()"></img>
+        <div id="popNotifica" class="divTilPopUp">
+            <h1 class="tituloPop">Notificación</h1>
+        </div>
+        <div id="notificaContenido" class="contenidoPop">
+            <div class="panelTexto">
+                <div class="textoPop">Espacio para texto automatico de notificación</div>
+            </div>
+                <img class="imgTq" src="images/tqLogo-PopUp.jpg"></img>
+               <button class="confirmaBtn" onclick="closeDialogNotifica()">Aceptar</button>
+        </div>
+    </dialog>
+    <dialog id="popUpRegistro" class="popDialog" >
+        <img class="cerrarPopUp" src="images/cerrarPop.png" onclick="closeDialogRecuperacion()"></img>
+        <div id="popRecupera" class="divTilPopUp">
+            <h1 class="tituloPop">Recuperar contraseña</h1>
+        </div>
+        <div id="recuperaContenido" class="contenidoPop">
+            <div id="panelTextoRecupera" class="panelTexto">
+                <select id="seleccionDoc"  name="documento">
+                    <option>Seleccione el tipo de documento</option>
+                    <option>Opcion 2</option>
+                    <option>Opcion 3</option>
+                </select>
+                <input id="datoId" type="text" name="numeroId" value="Numero de identificacion">
+            </div>
+                <img id="imgTqRecu" class="imgTq" src="images/tqLogo-PopUp.jpg"></img>
+               <button id="recuperaInfo" class="confirmaBtn" onclick="closeDialogRecuperacion()">Enviar</button>
+        </div>
+    </dialog>
+    
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/development.js"></script>
-<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/prob.js"></script>
 </body>
 </html>

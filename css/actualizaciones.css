@@ -1,27 +1,27 @@
 @charset "UTF-8";
 @import url(layout.css);
 @import url(entypostyle.css);
-#container-actualizaciones{
+.container-actualizaciones{
     max-width: 948px;
     margin: 0 auto;
     width: 90%;
 }
-#contenido-noticia{
+.contenido-noticia{
     width: 65%;
     display: inline-block;
     margin-bottom: 3vw;
 }
-#menu-lateral{
+.menu-lateral{
     width: 30%;
     display: inline-block;
     float: right;
 }
 @media (min-width: 320px) and (max-width: 767px){
-	#contenido-noticia{
+	.contenido-noticia{
 	    display: block;
 	    width: 100%;
 	}
-	#menu-lateral{
+	.menu-lateral{
 	    display: block;
 	    float: none;
 	    width: 100%;
@@ -30,21 +30,7 @@
 		margin-top: 25px;
 	}
 }
-/*Miga*/
-#miga-de-pan > div{
-    color: #70d0f6;
-    font-family: 'Open sans';
-    display: inline-block;
-    padding: 2vw 0.2vw;
-}
-#miga-de-pan > div:first-child{
-    padding-left: 0;
-}
-@media (min-width: 320px) and (max-width: 767px){
-	#miga-de-pan > div{
-		display: none;
-	}
-}
+
 /*Seccion Contenido*/
 #tituloEspecialidad{
     background-color: #213b62;
@@ -187,28 +173,28 @@
     background-position:center;
     background-image:url(../images/historial.png);
 }
-#contenido-noticia > h1{
+.contenido-noticia  h1{
     color: #23a9e1;
     font-family: 'Open sans bold';
     font-size: 35px;
     margin: 20px 0;
 }
-#contenido-noticia > p{
+.contenido-noticia p{
     color: #89878c;
     text-align: justify;
 }
-#contenido-noticia > p:nth-last-child(2){
+.contenido-noticia  p:nth-last-child(2){
     text-align: left;
 }
-#contenido-noticia > p > a{
+.contenido-noticia p > a{
     color: #44aee3;
     text-decoration: none;
 }
-#contenido-noticia > p:last-child{
+.contenido-noticia  p:last-child{
     color: #000;
     font-family: 'Open sans bold';
 }
-#contenido-noticia > p:last-child > img{
+.contenido-noticia  p:last-child > img{
     width: 2vw;
     margin-left: 0.5vw;
     vertical-align: bottom;
@@ -228,7 +214,7 @@
 	#rowSocial i:not(:nth-child(2)) {
 		margin-left: 0;
 	}
-	#contenido-noticia > p:last-child > img{
+	.contenido-noticia  p:last-child > img{
 	    width: 5vw;
 	    margin-left: 0.5vw;
 	    vertical-align: bottom;
