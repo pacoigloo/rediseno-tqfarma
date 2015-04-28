@@ -1,4 +1,4 @@
-﻿.product-link {
+.product-link {
     color: #348dce;
     text-decoration: none;
     font-size: 16px;
@@ -44,7 +44,7 @@
 }
 
 #cssmenu > ul li{
-    z-index:1000;
+    z-index:999;
 }
 /*MIGA DE PAN*/
 .miga-de-pan > *{
