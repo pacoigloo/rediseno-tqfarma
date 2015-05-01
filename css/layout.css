@@ -346,6 +346,8 @@ header{
 	width: -moz-max-content;
 	width: -webkit-max-content;
 	width: max-content;
+	width: -o-max-content;
+	width: -ms-max-content;
 	max-width: 250px;
 }
 .secondLevel li{
@@ -360,6 +362,8 @@ header{
 	width: -moz-max-content;
 	width: -webkit-max-content;
 	width: max-content;
+	width: -o-max-content;
+	width: -ms-max-content;
 	max-width: 250px;
 }
 #home{

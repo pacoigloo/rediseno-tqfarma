@@ -41,7 +41,7 @@ function comprobarDistTop(offsetMenuTop) {
 
 function topMenuChilds(){
     $(".thirdLevel").each(function(){
-        $(this).css("left",$(this).closest('ul[class^="secondLevel"]').width())
+        $(this).css("left",$(this).closest('ul[class^="secondLevel"]').width()-1)
     });
 }
 
