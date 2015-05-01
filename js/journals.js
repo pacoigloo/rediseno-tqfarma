@@ -20,26 +20,20 @@ $(document).ready(function () {
     
     if( window.innerWidth >= 767)
     {
-        console.log();
         $('#movilTemp').html('');
         $('#webTemp').html('<div id="btnsLateralesWeb" class = "tercera-columna">'+
-        '<div class="btnImagenes"> <img class="icon" src="images/radiology-icon.png"></img>'+
-        '<div class="textBtn"> Imágenes Populares </div></div><div class="btnImagenes">'+
-        '<img class="icon" src="images/commentadd-icon.png"></img> <div class="textBtn">'+
-        'Temas Populares </div></div></div>');
-        
+        '<div class="btnImagenes"> <img class="icon" src="images/journals.png"></img>'+
+        '<div class="textBtn"> Ver todas las <br> revistas de <br> ElSevier </div></div></div>');
     }
     else
     {
         if( window.innerWidth < 767)
         {
             $('#webTemp').html('');
-            $('#movilTemp').html('<div id="btnsLateralesMovil" class = "tercera-columna">'+
-        '<div class="btnImagenes"> <img class="icon" src="images/radiology-icon.png"></img>'+
-        '<div class="textBtn"> Imágenes Populares </div></div><div class="btnImagenes">'+
-        '<img class="icon" src="images/commentadd-icon.png"></img> <div class="textBtn">'+
-        'Temas Populares </div></div></div>');
-         }
+            $('#movilTemp').html('<div id="btnsLateralesWeb" class = "tercera-columna">'+
+            '<div class="btnImagenes"> <img class="icon" src="images/journals.png"></img>'+
+            '<div class="textBtn"> Ver todas las <br> revistas de <br> ElSevier </div></div></div>');
+        }
     }
 });
 
@@ -62,27 +56,20 @@ $( window ).resize(function() {
  
     if( window.innerWidth >= 767)
     {
-        console.log();
         $('#movilTemp').html('');
         $('#webTemp').html('<div id="btnsLateralesWeb" class = "tercera-columna">'+
-        '<div class="btnImagenes"> <img class="icon" src="images/radiology-icon.png"></img>'+
-        '<div class="textBtn"> Imágenes Populares </div></div><div class="btnImagenes">'+
-        '<img class="icon" src="images/commentadd-icon.png"></img> <div class="textBtn">'+
-        'Temas Populares </div></div></div>');
-        
+        '<div class="btnImagenes"> <img class="icon" src="images/journals.png"></img>'+
+        '<div class="textBtn"> Ver todas las <br> revistas de <br> ElSevier </div></div></div>');
     }
     else
     {
         if( window.innerWidth < 767)
         {
             $('#webTemp').html('');
-            $('#movilTemp').html('<div id="btnsLateralesMovil" class = "tercera-columna">'+
-        '<div class="btnImagenes"> <img class="icon" src="images/radiology-icon.png"></img>'+
-        '<div class="textBtn"> Imágenes Populares </div></div><div class="btnImagenes">'+
-        '<img class="icon" src="images/commentadd-icon.png"></img> <div class="textBtn">'+
-        'Temas Populares </div></div></div>');
+            $('#movilTemp').html('<div id="btnsLateralesWeb" class = "tercera-columna">'+
+            '<div class="btnImagenes"> <img class="icon" src="images/journals.png"></img>'+
+            '<div class="textBtn"> Ver todas las <br> revistas de <br> ElSevier </div></div></div>');
          }
     }
 });
- 
 //}

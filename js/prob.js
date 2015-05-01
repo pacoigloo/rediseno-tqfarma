@@ -1,126 +1,29 @@
-$(document).ready(function () {
-    
-   
-    //actualidad();
-    $("#flecha_izquierda").unbind().click(function(){
-       movimiento_flechas("left");
-    });
-    $("#flecha_derecha").unbind().click(function(){
-        movimiento_flechas("right");
-    });
-    $("#flecha_izquierda_ovid").unbind().click(function(){
-       movimiento_ovid("left");
-    });
-    $("#flecha_derecha_ovid").unbind().click(function(){
-        movimiento_ovid("right");
-    });
-    $(".section_menu > ul > li:first-child").unbind().click(function(){
-        $(".section_menu ul li:not('.section_menu > ul > li:first-child')").slideToggle('1000');
-        
-    });
-    
-    $(window).resize(function() {
-        actualidad();
-        alturaOvid();
-        
-    });
-});
-$(window).load(function () {
-    alturaOvid();
-});
 
     function showDialog(){
-         var x = document.getElementById("popUpCertificacion");
-         x.show();
-         $(".coverPopup").show();
-         //var titulo=document.getElementById("bienvenidaPop");
-         //titulo.style.fontSize ="24px";
+        $("#popUpCertificacion").show();
+        $(".coverPopup").show();
          
     }
     function closeDialog() { 
-        var x = document.getElementById("popUpCertificacion"); 
-        x.close(); 
+        
+        $("#popUpCertificacion").hide();
         $(".coverPopup").hide();
+       
     } 
      function showDialogNotifica(){
-         var y = document.getElementById("popUpNotifica");
-         y.show(); 
-         $(".coverPopup").show();
-         //var titulo=document.getElementById("bienvenidaPop");
-         //titulo.style.fontSize ="24px";
-         
+        $("#popUpNotifica").show();
+        $(".coverPopup").show();
     }
     function closeDialogNotifica() { 
-        var u = document.getElementById("popUpNotifica"); 
-        u.close(); 
+        $("#popUpNotifica").hide();
         $(".coverPopup").hide();
     } 
     function showDialogRecuperacion(){
-         var z = document.getElementById("popUpRegistro");
-         z.show(); 
-         $(".coverPopup").show();
-         //var titulo=document.getElementById("bienvenidaPop");
-         //titulo.style.fontSize ="24px";
-         
+        $("#popUpRegistro").show();
+        $(".coverPopup").show();
     }
     function closeDialogRecuperacion() { 
-        var t = document.getElementById("popUpRegistro"); 
-        t.close(); 
+        $("#popUpRegistro").hide();
         $(".coverPopup").hide();
     } 
-
-function actualidad(){
-    var ancho_actualidad = $("#container_actualidad").width();
-    if($(window).width() >= 768){
-        $(".noticias_actualidad").css("width",(ancho_actualidad/4)-2);
-        $("#tira_actualidad").css("width",ancho_actualidad*$("#tira_actualidad .grupo_noticias").length);
-    }else if($(window).width() < 768){
-        $(".noticias_actualidad").css("width",ancho_actualidad);
-        $("#tira_actualidad").css("width",($(".grupo_noticias").width()*$("#tira_actualidad .grupo_noticias").length)-ancho_actualidad+8);
-    }
     
-}
-
-function movimiento_flechas(direccion){
-    var ancho_actualidad = $("#container_actualidad").width();
-    var ancho_tira = $("#tira_actualidad").width();
-    var right_actual = $("#tira_actualidad").css("right");
-    if($(window).width() >= 768){
-        ancho_actualidad += 6;
-        if(direccion == "right" && parseInt(right_actual) < ancho_tira*3/4){
-            $("#tira_actualidad").animate({right: "+="+ancho_actualidad}, 1000);
-        }else if(direccion == "left" && parseInt(right_actual) > 0){
-            $("#tira_actualidad").animate({right: "-="+ancho_actualidad}, 1000);
-        }
-    }else if($(window).width() < 768){
-        ancho_actualidad += 3;
-        if(direccion == "right" && parseInt(right_actual) < ancho_tira-ancho_actualidad-16){
-            $("#tira_actualidad").animate({right: "+="+ancho_actualidad}, 1000);
-        }else if(direccion == "left" && parseInt(right_actual) > 0){
-            $("#tira_actualidad").animate({right: "-="+ancho_actualidad}, 1000);
-        }
-    }
-}
-
-function movimiento_ovid(direccion){
-    var miId = $(".libros_ovid").filter(function(){return $(this).css("display") === "block";});
-    miId = $(miId).attr("id");
-    miId = parseInt(miId);
-    if(direccion == "right" && miId<3){
-        $(".libros_ovid:eq("+miId+")").fadeOut(500, function(){
-            $(".libros_ovid:eq("+(miId+1)+")").fadeIn(500);    
-        });
-    }else if(direccion == "left" && miId>0){
-         $(".libros_ovid:eq("+miId+")").fadeOut(500, function(){
-            $(".libros_ovid:eq("+(miId-1)+")").fadeIn(500);     
-        });
-    }
-}
-
-function alturaOvid(){
-    if($(window).width() < 768){
-        var nuevaAltura = $(".section_ovid > img").outerHeight(true) + $(".section_ovid > .libros_ovid").outerHeight(true) + $(".section_ovid > h3").outerHeight(true);
-        $(".section_ovid").css("height",nuevaAltura);
-        $(".libros_ovid:first").show();
-    }
-}

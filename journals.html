@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Journals - Tecnoquímicas Farma</title>
+    <link href="css/journals.css" rel="stylesheet" type="text/css">
+    <link href="css/animation.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type='text/css' >
+    <!--<script src="js/jquery.js" type="text/javascript"></script>-->
+</head>
+<body>
+    <header>
+    	<div class="search">
+        	<input type="text">
+            <a href="#"><img src="images/buscador.png" alt="buscar"></a>
+        </div>
+        <div class="register">
+        	<a href="#">Quiénes Somos</a>
+            <a href="#">Contáctenos</a>
+            <a href="#">País <img src="images/co.png" alt="colombia"/></a>
+            <div>
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
+            </div>
+        </div>
+        <div id="popUpInicio">
+            <select>
+                <option disabled selected>Seleccione el tipo de documento</option>
+                <option>Cédula de Ciudadanía Colombiana</option>
+                <option>Cédula de Extranjería</option>
+                <option>Documento provisional Colombiano</option>
+            </select>
+            <input type="text" placeholder="Identificación"/>
+            <input type="text" placeholder="Contraseña" />
+            <div class="boton_ingresar">Ingresar</div>
+            <div class="check_recordar"><input type="checkbox" value="">Recordar su contraseña</div>
+            <div class="links_inicio"><a href="">¿Olvido su contraseña?</a><a href="">Registrarse</a></div>
+        </div>
+    </header>
+    <section class="section_menu">
+        <ul class="firstLevel">
+            <li>
+                <a href="#">
+                    <img id="home" src="images/home.png" alt="home"/><img id="menu" src="images/menu.png" alt="menu"/>TQFarma
+                </a>
+            </li>
+            <li>
+                <a href="#">Vademécum TQ</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados Hormonales Sistemicos</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Vademécum MK</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Oftalmológico TQ</a></li>
+            <li><a href="#">Biblioteca Científica</a></li>
+            <li><a href="#">Visita Online</a></li>
+            <li><a href="#">Red Cardiolat</a></li>
+            <li><a href="#">Espacio Otro Item</a></li>
+        </ul>
+    </section>
+    <section class="presentation">
+        <div id="bannerNormal">
+            <div class="amirsys-bannerfondo">
+                <img class="bottom" src="images/journals-fondo.jpg" />
+            </div>
+            <div class="amirsys-logo fadeIn">
+                <img class="bottom" src="images/journals-texto.png" />
+            </div>
+            <div class="amirsys-logo slideDown">
+                <img class="bottom" src="images/journals-logo.png" />
+            </div>
+            <div class="amirsys-logo slideUp">
+                <img class="bottom" src="images/journals-cafe.png" />
+            </div>
+            <div class="amirsys-logo slideRight">
+                <img class="bottom" src="images/journals-ipad.png" />
+            </div>
+            <div class="amirsys-logo slideDown">
+                <img class="bottom" src="images/journals-lapicero.png" />
+            </div>
+        </div>
+        <div id="bannerMovil">
+            <div class="amirsys-bannerfondo">
+                <img class="bottom" src="images/journals-fondo-movil.jpg" />
+            </div>
+            <div class="amirsys-logo fadeIn">
+                <img class="bottom" src="images/journals-texto-movil.png" />
+            </div>
+            <div class="amirsys-logo slideDown">
+                <img class="bottom" src="images/journals-logo-movil.png" />
+            </div>
+            <div class="amirsys-logo slideUp">
+                <img class="bottom" src="images/journals-cafe-movil.png" />
+            </div>
+            <div class="amirsys-logo slideRight">
+                <img class="bottom" src="images/journals-ipad-movil.png" />
+            </div>
+            <div class="amirsys-logo slideDown">
+                <img class="bottom" src="images/journals-lapicero-movil.png" />
+            </div>
+        </div>
+        <!--<img id="bannerNormal" src="images/banner-contactenos.jpg" alt="banner"/>
+        <img id="bannerMovil" src="images/banner-contactenos-movil.jpg" alt="banner para dispositivos moviles"/>-->
+    </section>
+    <section id ="contenidoPrinci" class="contenido_interna">
+        <div class="miga-de-pan">
+            <div>TQFarma</div>
+            <div>/</div>
+            <div>Biblioteca Científica</div>
+            <div>/</div>
+            <div>Journals</div>
+        </div>
+        <div id="columnaPrinci" class="primera-columna" name="columnaJournals">
+            <div id="webTemp" class = "tercera-columna">
+               
+            </div>
+            <div id="menuEspecialidad">
+                <div id="dl-menu" class="dl-menuwrapper">
+        		  	<div id="cajon">JOURNALS SUGERIDOS</div>
+        			<button class="dl-trigger">Open Menu</button>
+    				<ul class="dl-menu">
+    					<li><a href="#">ACC CURRENT JOURNAL REVIEW</a></li>
+    					<li><a href="#">ACCIDENT AND EMERGENCY NURSING</a></li>
+    					<li><a href="#">ACTIVIDAD DIETÉTICA</a></li>
+    					<li><a href="#">ACTIVITIES FOR OLDER PEOPLE</a></li>
+    					<li><a href="#">ACUPUNTURE</a></li>
+    					<li><a href="#">ACUPUNTURE IN MANUAL THERAPY</a></li>
+    					<li><a href="#">ACUPUNTURE IN PHYSIOTHERAPY</a></li>
+    					<li><a href="#">ACUPUNTURE IN PRACTICE</a></li        >
+    					<li><a href="#">ACUPUNTURE RESEARCH</a></li>
+    					<li><a href="#">ADVANCE IN FOOD RESEARCH</a></li>
+    					<li><a href="#">VER MÁS...</a></li>
+    				</ul>
+        		</div>
+            </div>
+            <div id='primero'>
+                <a href='#'><span>JOURNALS SUGERIDOS</span></a>
+            </div>
+            <div id='cssmenu'>
+                <ul>
+                    <li class='has-sub last'><a href='#'><span>ACC CURRENT JOURNAL REVIEW</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACCIDENT AND EMERGENCY NURSING</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACTIVIDAD DIETÉTICA</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACTIVITIES FOR OLDER PEOPLE</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACUPUNTURE</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACUPUNTURE IN MANUAL THERAPY</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACUPUNTURE IN PHYSIOTHERAPY</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACUPUNTURE IN PRACTICE</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ACUPUNTURE RESEARCH</span></a></li>
+                    <li class='has-sub'><a href='#'><span>ADVANCE IN FOOD RESEARCH</span></a></li>
+                    <li class='has-sub'><a href='#'><span>VER MÁS...</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="columna-central">
+            <div id="bannerInferior">
+                <div id="contenedorBannerInf">
+                    <div id="fondoBannerInf" class="">
+                        <img class="imgBanin" src="images/journals-fondomobile.jpg" />
+                    </div>
+                    <div id="textoBannerInf" class="slideDown">
+                        <img src="images/journals-textomobile.png" class="imgBanin" />
+                    </div>
+                </div>
+                    <div id="revistasBannerInf" class="slideRight">
+                        <img src="images/journals-revistasmobile.png" class="imgBanin" />
+                    </div>
+                    <div id="journlasBannerInf" class="fadeIn">
+                        <img src="images/journalsmobile.png" class="imgBanin" />
+                    </div>
+                    <div id="botonBannerInf" class="slideUp">
+                        <a href="http://www.tqfarma.com/mailtemplates/VIDEO/ins-journals.mp4">
+                            <img src="images/journals-botonmobile.png" class="imgBanin" /></a>
+                    </div>
+            </div>
+             <div id="movilTemp"></div>
+            <h2>Journals ELSEVIER</h2>
+            <p>Tecnoquímicas ofrece a los médicos y odontólogos la plataforma 
+            Science Direct, herramienta de búsqueda de una de las editoriales mas
+            importantes del mundo. ELSEVIER.</p>
+            <p>La descarga de artículos es totalmente gratuita, si se accede
+            desde la plataforma del portal www.TQFarma.com</p>
+        </div>
+       
+    </section>
+    <footer>
+        <div class="footer_menu">
+            <ul>
+                <li>Home</li>
+                <li>Vademécum Tecnoquímicas</li>
+                <li>Vademécum MK</li>
+                <li>Oftalmológicos TQ</li>
+                <li>Biblioteca Científica</li>
+            </ul>
+        </div>
+        <div class="footer_somos">
+            <ul>
+                <li>Quiénes Somos</li>
+                <li>Contáctenos</li>
+            </ul>
+        </div>
+        <div class="footer_act">
+            <ul>
+                <li>Actualizar datos</li>
+            </ul>
+        </div>
+        <div class="footer_copy">
+            <ul>
+                <li>Copyright (c) 2013 Tecnoquímicas</li>
+                <li>Ingresar</li>
+                <li>Mayor información www.tecnoquimicas.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/dlmenu.js"></script>
+    <script type="text/javascript" src="js/development.js"></script>
+    <script type="text/javascript" src="js/journals.js" ></script>
+</body>
+</html>
