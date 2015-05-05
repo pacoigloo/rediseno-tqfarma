@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import url(layout.css);
+
+.terminos{
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+    max-width: 948px;
+}
+.terminos h1{
+    color: #2e8cd1;
+    font-family: 'Open sans light';
+    font-size: 38px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: lighter;
+}
+.terminos h3{
+	color: #2e8cd1;
+	font-size: 21px;
+}
+.terminos-fondo{
+	text-align: left;
+	margin-left:1px;
+	z-index:1;
+	overflow:hidden;
+	width: 100%;
+}
+.terminos-barra{
+	position: absolute;
+	text-align: left;
+	margin-top:0px;
+	z-index:2;
+	top: 0;
+	width: 100%;
+}
+.terminos-titulos{
+	position: absolute;
+	text-align: left;
+	margin-top:0px;
+	z-index:3;
+	top: 0;
+	width: 100%;
+}
+.terminos-fondo img, .terminos-barra img, .terminos-titulos img{
+	width: 100%;
+}
+#bannerNormal {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 948px;
+	position: relative;
+	overflow: hidden;
+}
+#bannerMovil{
+	position: relative;
+	overflow: hidden;
+}
+.terminos-description{
+	color: #6d6967;
+	text-align: justify;
+	font-size: 18px;
+	line-height: 20px;
+}

@@ -342,7 +342,8 @@ header{
 	display: none;
 	position: absolute;
 	top: 38px;
-	background-color: #1E68A5;
+	/*background-color: #1E68A5;*/
+	background-color: #4295d8;
 	width: -moz-max-content;
 	width: -webkit-max-content;
 	width: max-content;
@@ -358,13 +359,15 @@ header{
 	display: none;
 	position: absolute;
 	top: 0;
-	background-color: #215D8E;
+	/*background-color: #215D8E;*/
+	background-color: #4295d8;
 	width: -moz-max-content;
 	width: -webkit-max-content;
 	width: max-content;
 	width: -o-max-content;
 	width: -ms-max-content;
 	max-width: 250px;
+	border-left: 1px transparent;
 }
 #home{
 	display: inline-block;

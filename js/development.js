@@ -59,3 +59,6 @@ function positionLogin(){
         $(".section_menu > ul > li:not('.section_menu > ul > li:first-child')").css("display","none");
     }
 }
+$("#firstLevel > li::after").click(function(){
+    console.log("click");
+});
