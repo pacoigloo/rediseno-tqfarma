@@ -404,7 +404,7 @@ header{
 		display: inline-block;
 		padding-right: 15px;
 	}
-	.section_menu > ul{
+	.section_menu ul{
 		margin: 0;
 		padding: 0;
 		text-align: left;
@@ -412,7 +412,9 @@ header{
 	}
 	.section_menu > ul > li{
 		display: block;
-		padding: 9.5px 20px;
+		/*padding: 9.5px 20px;*/
+		/*padding: 0 20px;*/
+		padding: 0;
 		position: relative;
 		display: none;
 		background-color: #4295d8;
@@ -437,6 +439,28 @@ header{
 		border-left: 4px solid #fff;
 	}
 	.section_menu > ul > li:first-child::after{
+		display: none;
+	}
+	.secondLevel{
+		position: relative;
+		top: 0;
+		max-width: none;
+		width: 100%;
+	}
+	.secondLevel > li{
+		padding: 0;
+	}
+	.section_menu a{
+		height: 38px;
+		display: block;
+		text-align: left;
+		line-height: 38px;
+		padding-left: 17px;
+		margin: 0;
+	}
+}
+@media (min-width: 768px){
+	.secondLevel li:first-of-type{
 		display: none;
 	}
 }

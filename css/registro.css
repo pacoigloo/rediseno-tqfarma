@@ -343,6 +343,26 @@
 	letter-spacing: 1px;
 	display:inline-block;
 }
+.column5{
+	width: 100%;
+	display:none;
+	cursor: pointer;
+	text-transform:none;
+	margin-top:0px;
+	padding: 15px 10px;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	
+}
+
+.column5 > .numHijo{
+  display: block;
+  padding: 10px 0px 0px 2px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 #cajon1 {
 	width: 50%;
 	padding: 25px  0px 0px 40px;
@@ -401,6 +421,21 @@
 	text-transform: none;
 	text-align: start;
 }
+.cajon9 {
+	width: 50%;
+	padding: 0px  20px 5px 10px;
+	margin-top:0px;
+	float: left;
+	text-transform: none;
+	text-align: start;
+}
+.cajon10 {
+	width: 50%;
+	padding: 0px  20px 10px 30px;
+	float: left;
+	text-transform: none;
+	text-align: start;
+}
 .texto {
 	width: 100%;
 	padding-bottom:3em;
@@ -427,6 +462,7 @@
 	/*margin-left:65px;*/
 	color:#7C7C7C;
 }
+
 .cbp-mc-form input.cbp-mc-submit:hover {
 	background: #47a3da;
 }
@@ -469,6 +505,9 @@
 	.column4{
 		  font-size: 0.9em;
 	}
+	.column5{
+	 	  font-size: 0.9em;
+	}
 	.texto2{
 		text-align:center;
 		font-size:5.4vw;
@@ -478,6 +517,9 @@
 		font-size:4.1vw;
 	}
 	.cbp-mc-form label {
+		font-size: 4vw;
+	}
+	.column5 > .numHijo{
 		font-size: 4vw;
 	}
 	.checks{

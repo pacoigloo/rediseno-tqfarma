@@ -32,14 +32,29 @@
     }
 }
 /*Banner principal*/
+
+#bannerNormal{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 948px;
+  position: relative;
+  overflow: hidden;
+}
+
+#bannerMovil{
+	position: relative;
+	overflow: hidden;
+}
+
 #ovid-bannerfondo{
-	position: absolute;
+	/*position: absolute;
 	/*width: 952px;
 	height: 242px;*/
 	text-align: left;
 	margin-left:1px;
 	z-index:1;
-	top: 0;
+	overflow:hidden;
+	width: 100%;
 }
 #ovid-teclado{
 	position: absolute;
@@ -49,6 +64,7 @@
 	margin-top:0px;
 	z-index:2;
 	top: 0;
+	width: 100%;
 }
 #ovid-mouse{
 	position: absolute;
@@ -58,6 +74,7 @@
 	margin-top:0px;
 	z-index:3;
 	top: 0;
+	width: 100%;
 }
 #ovid-libro{
 	position: absolute;
@@ -67,6 +84,7 @@
 	margin-top:0px;
 	z-index:4;
 	top: 0;
+	width: 100%;
 }
 #ovid-ovid{
 	position: absolute;
@@ -76,6 +94,7 @@
 	margin-top:0px;
 	z-index:5;
 	top: 0;
+	width: 100%;
 }
 #ovid-libros{
 	position: absolute;
@@ -85,6 +104,7 @@
 	margin-top:0px;
 	z-index:6;
 	top: 0;
+	width: 100%;
 }
 #ovid-wolters{
 	position: absolute;
@@ -94,9 +114,17 @@
 	margin-top: 0px;
 	z-index:7;
 	top: 0;
+	width: 100%;
 }
+
+#ovid-bannerfondo img, #ovid-teclado img, #ovid-mouse img, #ovid-libro img, 
+#ovid-ovid img, #ovid-libros img, #ovid-wolters img{
+	width: 100%;
+}
+
+
 /*Menu lateral*/
-#primero > a {
+#primero a {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -130,11 +158,9 @@
     padding: 0;
     vertical-align: baseline;
     line-height: 1;
-}
-#cssmenu > ul {
     display: block;
     position: relative;
-    /*width: 150px;*/
+    
 }
 #cssmenu > ul li {
     display: block;
@@ -208,10 +234,10 @@
     }
 }
 /*Columna Central*/
-.columna-central > #bannerInferior{
+#bannerInferior{
 	position: relative;
 }
-.columna-central > #bannerInferior > #ovidInf-fondo{
+#ovidInf-fondo{
 	/*position: absolute;
 	width: 701px;
 	height: 402px;*/
@@ -221,7 +247,7 @@
 	top: 0;
 	width: 100%;
 }
-.columna-central > #bannerInferior > #ovidInf-texto{
+#ovidInf-texto{
 	position: absolute;
 	/*width: 952px;
 	height: 242px;*/
@@ -231,36 +257,32 @@
 	top: 0;
 	width: 100%;
 }
-.columna-central > #bannerInferior > #ovidInf-fondo img, .columna-central > #bannerInferior > #ovidInf-texto img{
+#ovidInf-fondo img,#ovidInf-texto img{
 	width: 100%;
 }
-.columna-central > h2{
+.columna-central  h2{
     font-family: 'Open Sans Light';
     width: 100%;
     font-size: 3vw;
     color: #2e8cd1;
     margin-bottom: 0;
 }
-.columna-central > p{
+.columna-central  p{
     font-family: 'Open Sans';
     width: 100%;
     font-size: 1.3vw;
     color: #6d6967;
     text-align: justify;
 }
-.columna-central > p:last-of-type{
+.columna-central  p:last-of-type{
     margin-bottom: 20vh;
 }
-@media (min-width:1000px){
-	.columna-central > h2{
-		/*margin-top: 402px;*/
-    }
-}
+
 @media (min-width:320px) and (max-width:767px){
-    .columna-central > h2{
+    .columna-central h2{
         font-size: 6vw;
     }
-    .columna-central > p{
+    .columna-central p{
         font-size: 4vw;
     }
 }
@@ -268,7 +290,7 @@
 #dl-menu{
     padding: 4vw 0;
 }
-#dl-menu > #cajon{
+#cajon{
     background-color: #23a9e1;
     width: 85%;
     height: auto;
