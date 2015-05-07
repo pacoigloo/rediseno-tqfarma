@@ -316,6 +316,7 @@ header{
 	font-size: 14px;
 	padding: 0;
     text-decoration: none;
+    cursor: pointer;
 }
 .firstLevel > li{
 	display: inline-block;
@@ -541,7 +542,7 @@ footer > div{
 	padding-left: 4vw;
 	padding-bottom: 0.4vw;
 }
-footer > .footer_menu{
+.footer_menu{
 	color: #fff;
 	padding-top: 2.6vw;
 }
@@ -558,20 +559,36 @@ footer ul > li{
 .footer_menu > ul > li{
 	border-right: 1px solid white;
 }
+.footer_menu a{
+	color: #fff;
+	text-decoration: none;
+}
+.footer_somos a{
+	color: #6a9fd1;
+	text-decoration: none;
+}
+.footer_act a{
+	color: #75a9d7;
+	text-decoration: none;
+}
+.footer_copy a{
+	color: #75a9d7;
+	text-decoration: none;
+}
 footer ul > li:last-child{
 	border: none;
 }
-footer > .footer_somos{
+.footer_somos{
 	color: #6a9fd1;
 }
-.footer_somos > ul > li{
+.footer_somos ul > li{
 	border-right: 1px solid #6a9fd1;
 }
-footer > .footer_act{
+.footer_act{
 	color: #75a9d7;
 	font-family: 'Open Sans Bold';
 }
-footer > .footer_copy{
+.footer_copy{
 	color: #7fa7d0;
 	position: absolute;
 	bottom: 0px;
@@ -598,30 +615,46 @@ footer > .footer_copy{
 	footer{
 		font-size: 12px;
 	}
-	footer > .footer_menu {
+	.footer_menu {
 		padding-top: 7vw;
 	}
-	.footer_copy > ul > li:last-child {
+	.footer_copy ul > li:last-child {
 		margin-left: 5vw;
 		display: block;
 	}
 }
 @media (min-width: 320px) and (max-width: 767px){
 	footer{
-		line-height: 8vw;
+		line-height: 6vw;
 		background: url("../images/footer-movil.jpg") no-repeat;
 		background-size: auto;
 		height: 281px;
 		background-position: right bottom;
 	}
-	footer > .footer_copy{
+	.footer_copy{
 		position: absolute;
 		bottom: 45px;
 		font-size: 10px;
-		width: 63vw;
+		width: 60vw;
 	}
-	.footer_copy > ul > li:last-child{
+}
+@media (min-width: 610px) and (max-width: 767px){
+	footer{
+		font-size: 13px;
+		line-height: 5vw;
+	}
+}
+@media (min-width: 420px) and (max-width: 767px){
+	.footer_copy ul > li:last-child{
 		margin-left: 6vw;
+	}
+}
+@media (min-width: 320px) and (max-width: 420px){
+	footer{
+		line-height: 8vw;
+	}
+	.footer_copy ul > li:last-child{
+		margin-left: 4vw;
 	}
 }
 
