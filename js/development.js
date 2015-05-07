@@ -1,3 +1,5 @@
+var activeMenu = false;
+
 $(document).ready(function () {
     var offsetMenuTop = $(".section_menu").offset().top;
     positionLogin();
@@ -13,6 +15,8 @@ $(document).ready(function () {
 
     $(".section_menu > ul > li:first-child").unbind().click(function () {
         if(window.innerWidth < 768){
+            activeMenu = !activeMenu;
+            console.log("ActiveMenu: "+ activeMenu);
             $(".section_menu > ul > li:not('.section_menu > ul > li:first-child')").slideToggle('1000');
         }
     });
@@ -56,15 +60,25 @@ function positionLogin(){
         //Posicion login
         $(".section_menu").append($("#popUpInicio"));
         //Menú superior
-        $(".section_menu > ul > li:not('.section_menu > ul > li:first-child')").css("display","none");
+        if(activeMenu == true){
+            $(".section_menu > ul > li:not('.section_menu > ul > li:first-child')").css("display","block");
+        }else{
+            $(".section_menu > ul > li:not('.section_menu > ul > li:first-child')").css("display","none");   
+        }
     }
 }
 $(".firstLevel > li > a").click(function(){
-    $("ul.secondLevel").slideUp(500);
-    $(this).parent().children("ul.secondLevel").slideToggle(500);
-});
-$(".secondLevel > li").click(function(){
-    //Mas o menos xD
-   //$(this).children("ul.thirdLevel").slideToggle({direction: 'right'},500) ;
-   //$(this).children("ul.thirdLevel").appendTo($(".firstLevel"));
+    var active = false;
+    //Verifica si el menu del click esta activo
+    if($(this).parent().children("ul.secondLevel").css("display") == "block"){
+        active = true;   
+    }
+    //Los esconde todos
+    if($("ul.secondLevel").is(":visible")){
+        $("ul.secondLevel").slideUp(500);
+    }
+    //Si no estaba activo antes entonces lo baja
+    if(active != true){
+        $(this).parent().children("ul.secondLevel").slideDown(500);
+    }
 });

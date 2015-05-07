@@ -446,9 +446,13 @@ header{
 		top: 0;
 		max-width: none;
 		width: 100%;
+		background-color: #2482CF;
 	}
 	.secondLevel > li{
 		padding: 0;
+	}
+	.secondLevel > li:not(:last-child){
+		border-bottom: 1px solid #1C73B2;
 	}
 	.section_menu a{
 		height: 38px;
