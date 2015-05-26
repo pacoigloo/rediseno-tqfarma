@@ -311,8 +311,11 @@
 .columna-central .nombre-producto > img{
     position: absolute;
     top: -50%;
+    width:auto;
+    margin: 0 auto;
     right: 0;
     margin-right: 15px;
+    display: block;
 }
 @media (min-width: 320px) and (max-width: 767px){
     .columna-central > img{
@@ -327,7 +330,7 @@
         font-size: 32px;
     }
     .columna-central .nombre-producto > img{
-       width: 34%;
+       width: 100px;
     }
 }
 /*Acordeon*/

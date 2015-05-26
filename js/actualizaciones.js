@@ -59,11 +59,11 @@ function movimiento_related(direccion){
 }
 
 function posicionTabs(){
-    if($(window).width() < 768){
+    if(window.innerWidth < 768){
         $('#tabs-laterales').appendTo('#menuEspecialidad');
         $('#dl-menu > button').css('height',parseInt($('#dl-menu > #cajon').css('height')));
-    }else if($(window).width() >= 768){
-        $('#tabs-laterales').prependTo('#menu-lateral');
+    }else if(window.innerWidth >= 768){
+        $('#tabs-laterales').prependTo('.menu-lateral');
         $('#dl-menu > button').css('height',"50px");
     }
 }

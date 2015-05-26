@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    //actualidad();
+    actualidad();
     $("#flecha_izquierda").unbind().click(function(){
        movimiento_flechas("left");
     });
@@ -26,6 +26,7 @@ $(document).ready(function () {
 });
 $(window).load(function () {
     alturaOvid();
+    actualidad();
 });
 
 function actualidad(){

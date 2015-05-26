@@ -5,6 +5,7 @@
 .section-vademecums{
 	width: 90%;
 	margin: 0 auto;
+	margin-top: 66.6px;
 	display: block;
 	max-width: 948px;
 	color: #494949;
@@ -83,16 +84,19 @@
 	font-family: 'Open sans';
 }
 .section_news > h3, .section_actualidad > h3, .section_ovid > h3{
-	font-size: 31px;
+	font-size: 28px;
+	color:#494949;
+	margin-top: 66.6px;
 	margin-bottom: 0;
 	display: block;
+	
 }
 .section_news > img, .section_actualidad > img, .section_ovid > img{
 	display: block;
 	margin-bottom: 2vw;
 }
 .section_news > .noticias_interes{
-	width: 49.8%;
+	width: 49.7%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -210,12 +214,10 @@
 }
 .section_actualidad > #container_actualidad .noticias_actualidad > h4{
 	margin: 0;
-	font-family: 'Open sans Bold';
+	font-family: 'Open Sans';/*'Open sans Bold';*/
 	text-transform: uppercase;
 	color: #000;
-	font-size: 0.8vw;
-    
-    
+	font-size: 13px/*0.8vw*/;
 }
 
 .section_actualidad > #container_actualidad .noticias_actualidad > h4 a{
@@ -266,7 +268,10 @@
 	text-align: center;
 	margin-left: 1vw;
 	margin-right: 1vw;
-	font-size: 0.8vw;
+	font-family:'Open Sans';
+	color:#000;
+	font-size: 13px/*0.8vw*/;
+	font-weight:400;
 }
 .section_ovid > #flecha_derecha_ovid, .section_ovid > #flecha_izquierda_ovid{
 	display: none;

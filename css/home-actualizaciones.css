@@ -14,14 +14,15 @@
 }
 .primera-columna{
     width: 25%;
+    margin-right:30px;
     min-width: 200px;
 }
 .columna-central{
-    width: 74%;
+    width: 71%;
 }
 @media (min-width:768px) and (max-width: 1000px){
     .columna-central{
-        width: 70%;
+        width: 65%;
     }
 }
 @media (min-width: 320px) and (max-width: 767px){
@@ -148,16 +149,18 @@
     font-family: 'Open Sans Light';
     width: 100%;
     font-size: 3vw;
-    color: #2e8cd1;
+    color: #2494db;
+    margin-top: 45px;
     margin-bottom: 0;
 }
 .columna-central  p{
     font-family: 'Open Sans';
     width: 100%;
     font-size: 1.3vw;
-    color: #6d6967;
+    color: #494949;
     text-align: justify;
     margin-bottom: 20vh;
+    margin-top: 33px;
 }
 .columna-central  .slideshow  img{
     width: 100%;
@@ -172,10 +175,10 @@
 }
 @media (min-width:1180px){
     .columna-central > h2{
-        font-size: 40px;
+        font-size: 36px;
     }
     .columna-central > p{
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 /*Menu de especializaciones*/
