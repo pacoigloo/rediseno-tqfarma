@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vademécum - Tecnoquímicas Farma</title>
+    <link href="css/home-interna.css" rel="stylesheet" type="text/css">
+    <link href="css/animation.css" rel="stylesheet" type="text/css">
+    <link href="css/image-slider.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+    	<div class="search">
+        	<input type="text">
+            <a href="#"><img src="images/buscador.png" alt="buscar"></a>
+        </div>
+        <div class="register">
+        	<a href="#">Quiénes Somos</a>
+            <a href="#">Contáctenos</a>
+            <ul id="ulPaises" class="pais">
+                <li id="defaultPais">
+                    <a href="#">País<img id="imgPaisTop" src="images/co.png" alt="colombia"/></a>
+                    <ul class="subPaises">
+                        <li class="active">
+                            <a href="#" class ="">
+                                <div class="asubPais"><img class="imgPais" src="images/co.png"/><p>Colombia</p></div>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class ="" >
+                                <div class="asubPais"><img class="imgPais" src="images/icon_ecuador.png"/><p>Ecuador</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class ="">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_elsalvador.png"/><p>El Salvador</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_guatemala.png"/><p>Guatemala</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_honduras.png"/><p>Honduras</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_nicaragua.png"/><p>Nicaragua</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_panama.png"/><p>Panama</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_rdcana.png"/><p>Rep. Dominicana</p></div> 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
+            </div>
+        </div>
+        <div id="popUpInicio">
+            <select>
+                <option disabled selected>Seleccione el tipo de documento</option>
+                <option>Cédula de Ciudadanía Colombiana</option>
+                <option>Cédula de Extranjería</option>
+                <option>Documento provisional Colombiano</option>
+            </select>
+            <input type="text" placeholder="Identificación"/>
+            <input type="text" placeholder="Contraseña" />
+            <div class="boton_ingresar">Ingresar</div>
+            <div class="check_recordar"><input type="checkbox" value="">Recordar su contraseña</div>
+            <div class="links_inicio"><a href="">¿Olvido su contraseña?</a><a href="">Registrarse</a></div>
+        </div>
+    </header>
+    <section class="section_menu">
+        <ul class="firstLevel">
+            <li>
+                <a href="#">
+                    <img id="home" src="images/home.png" alt="home"/><img id="menu" src="images/menu.png" alt="menu"/>TQFarma
+                </a>
+            </li>
+            <li>
+                <a href="#">Vademécum TQ</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados Hormonales Sistemicos</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Vademécum MK</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Oftalmológico TQ</a></li>
+            <li><a href="#">Biblioteca Científica</a></li>
+            <li><a href="#">Visita Online</a></li>
+            <li><a href="#">Red Cardiolat</a></li>
+            <li><a href="#">Espacio Otro Item</a></li>
+        </ul>
+    </section>
+    <section class="presentation">
+        <div id="bannerNormal">
+            <div class="amirsys-bannerfondo">
+                <img class="bottom" src="images/homevt_fondo.jpg" />
+            </div>
+            <div class="slideRight amirsys-medico">
+                <img class="bottom" src="images/homevt_titulo.png" />
+            </div>
+            <div class="stretchLeft amirsys-texto">
+                <img class="bottom" src="images/homevt_barra.png" />
+            </div>
+           
+        </div>
+        <div id="bannerMovil">
+            <div class="amirsys-bannerfondo">
+                <img class="bottom" src="images/homevt_fondo_mobile.jpg" />
+            </div>
+            <div class="slideRight amirsys-medico">
+                <img class="bottom" src="images/homevt_titulo_mobile.png" />
+            </div>
+            <div class="stretchLeft amirsys-texto">
+                <img class="bottom" src="images/homevt_barra_mobile.png" />
+            </div>
+        </div>
+        <!--<img id="bannerNormal" src="images/banner-contactenos.jpg" alt="banner"/>
+        <img id="bannerMovil" src="images/banner-contactenos-movil.jpg" alt="banner para dispositivos moviles"/>-->
+    </section>
+    <section id ="contenidoPrinci" class="contenido_interna">
+        <div class="miga-de-pan">
+            <div>Vademécum Tecnoquímicas</div>
+        </div>
+        <div id="columnaPrinci" class="primera-columna">
+            <div id="menuEspecialidad">
+                <div id="dl-menu" class="dl-menuwrapper">
+        		  	<div id="cajon">Terapias</div>
+        			<button class="dl-trigger">Open Menu</button>
+    				<ul class="dl-menu">
+    					<li><a href="#">Dermatológica</a></li>
+    					<li><a href="#">Gastrointestinal</a></li>
+    					<li><a href="#">Inflamación y Dolor</a></li>
+    					<li><a href="#">Institucional</a></li>
+    					<li><a href="#">Neuropsiquiátrica</a></li>
+    					<li><a href="#">Órganos de los sentidos</a></li>
+    					<li><a href="#">Pediátrica</a></li>
+    					<li><a href="#">Respiratoria</a></li>
+    					<li><a href="#">Salud Femenina</a></li>
+    					<li><a href="#">Urológica</a></li>
+    				</ul>
+        		</div>
+            </div>
+           
+            <div id='primero'>
+                <a id="a" href='#'><span>Productos</span></a>
+                <a id="b" href='#'><span>Terapias</span></a>
+            </div>
+            <div id='cssmenu'>
+                <ul>
+                    <li class='has-sub last'><a href='#'><span>Dermatológica</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Gastrointestinal</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Inflamación y Dolor</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Institucional</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Neuropsiquiátrica</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Órganos de los sentidos</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Pediátrica</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Respiratoria</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Salud Femenina</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="columna-central">
+            <div id="bannerInferior">
+                <div id="sliderFrame">
+                    <div id="slider">
+                    
+                        <img src="images/home_inter_1.jpg" alt="" />
+                        <img src="images/home_inter_2.jpg" alt="" />
+                        <img src="images/home_inter_3.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div id="webTemp">
+                <ul class="lineaVadem">
+                    <li><a href='#'>Línea Dermatologica</a></li>
+                    <li><a href='#'>Línea Institucional</a></li>
+                    <li><a href='#'>Línea Pediátrica</a></li>
+                    <li><a href='#'>Línea Urológica</a></li>
+                </ul>
+                        
+                <ul class="lineaVadem">
+                    <li><a href='#'>Línea Gastrointestinal</a></li>
+                    <li><a href='#'>Línea Neuropsiquiátrica</a></li>
+                    <li><a href='#'>Línea Respiratoria</a></li>
+                </ul>
+                <ul class="lineaVadem">
+                    <li><a href='#'>Línea Inflamación y Dolor</a></li>
+                    <li><a href='#'>Línea Órganos de los Sentidos</a></li>
+                    <li><a href='#'>Línea Salud Femenina</a></li>
+                </ul>
+            </div>
+             <div id="movilTemp">
+                <table>
+                    <tr>
+                        <td>
+                            <ul class="lineaVadem">
+                                <li><a href='#'>Línea Dermatologica</a></li>
+                                <li><a href='#'>Línea Institucional</a></li>
+                                <li><a href='#'>Línea Pediátrica</a></li>
+                                <li><a href='#'>Línea Urológica</a></li>
+                                <li><a href='#'>Línea Gastrointestinal</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="lineaVadem">
+                                <li><a href='#'>Línea Neuropsiquiátrica</a></li>
+                                <li><a href='#'>Línea Respiratoria</a></li>
+                                <li><a href='#'>Línea Inflamación y Dolor</a></li>
+                                <li><a href='#'>Línea Órganos de los Sentidos</a></li>
+                                <li><a href='#'>Línea Salud Femenina</a></li>
+                            </ul>
+                    </td>
+                    </tr>
+                </table>
+                 
+                    
+                    
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_menu">
+            <ul>
+                <li>Home</li>
+                <li>Vademécum Tecnoquímicas</li>
+                <li>Vademécum MK</li>
+                <li>Oftalmológicos TQ</li>
+                <li>Biblioteca Científica</li>
+            </ul>
+        </div>
+        <div class="footer_somos">
+            <ul>
+                <li>Quiénes Somos</li>
+                <li>Contáctenos</li>
+            </ul>
+        </div>
+        <div class="footer_act">
+            <ul>
+                <li>Actualizar datos</li>
+            </ul>
+        </div>
+        <div class="footer_copy">
+            <ul>
+                <li>Copyright (c) 2013 Tecnoquímicas</li>
+                <li>Ingresar</li>
+                <li>Mayor información www.tecnoquimicas.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/dlmenu.js"></script>
+    <script type="text/javascript" src="js/development.js"></script>
+    <script type="text/javascript" src="js/image-slider.js" ></script>
+    <script type="text/javascript" src="js/home-interna.js" ></script>
+</body>
+</html>

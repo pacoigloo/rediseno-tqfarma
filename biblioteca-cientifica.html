@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblioteca Científica - Tecnoquímicas Farma</title>
+    <link href="css/biblioteca-cientifica.css" rel="stylesheet" type="text/css">
+    <link href="css/animation.css" rel="stylesheet" type="text/css">
+    <link href="css/image-slider.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+    	<div class="search">
+        	<input type="text">
+            <a href="#"><img src="images/buscador.png" alt="buscar"></a>
+        </div>
+        <div class="register">
+        	<a href="#">Quiénes Somos</a>
+            <a href="#">Contáctenos</a>
+            <ul id="ulPaises" class="pais">
+                <li id="defaultPais">
+                    <a href="#">País<img id="imgPaisTop" src="images/co.png" alt="colombia"/></a>
+                    <ul class="subPaises">
+                        <li class="active">
+                            <a href="#" class ="">
+                                <div class="asubPais"><img class="imgPais" src="images/co.png"/><p>Colombia</p></div>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class ="" >
+                                <div class="asubPais"><img class="imgPais" src="images/icon_ecuador.png"/><p>Ecuador</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class ="">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_elsalvador.png"/><p>El Salvador</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_guatemala.png"/><p>Guatemala</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_honduras.png"/><p>Honduras</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_nicaragua.png"/><p>Nicaragua</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_panama.png"/><p>Panama</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_rdcana.png"/><p>Rep. Dominicana</p></div> 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
+            </div>
+        </div>
+        <div id="popUpInicio">
+            <select>
+                <option disabled selected>Seleccione el tipo de documento</option>
+                <option>Cédula de Ciudadanía Colombiana</option>
+                <option>Cédula de Extranjería</option>
+                <option>Documento provisional Colombiano</option>
+            </select>
+            <input type="text" placeholder="Identificación"/>
+            <input type="text" placeholder="Contraseña" />
+            <div class="boton_ingresar">Ingresar</div>
+            <div class="check_recordar"><input type="checkbox" value="">Recordar su contraseña</div>
+            <div class="links_inicio"><a href="">¿Olvido su contraseña?</a><a href="">Registrarse</a></div>
+        </div>
+    </header>
+    <section class="section_menu">
+        <ul class="firstLevel">
+            <li>
+                <a href="#">
+                    <img id="home" src="images/home.png" alt="home"/><img id="menu" src="images/menu.png" alt="menu"/>TQFarma
+                </a>
+            </li>
+            <li>
+                <a href="#">Vademécum TQ</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados Hormonales Sistemicos</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Vademécum MK</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Oftalmológico TQ</a></li>
+            <li><a href="#">Biblioteca Científica</a></li>
+            <li><a href="#">Visita Online</a></li>
+            <li><a href="#">Red Cardiolat</a></li>
+            <li><a href="#">Espacio Otro Item</a></li>
+        </ul>
+    </section>
+    <section class="presentation">
+        <div id="bannerNormal">
+            <div id="ovid-bannerfondo">
+                <img class="bottom" src="images/BC_fondo.jpg" />
+            </div>
+            <div id="ovid-teclado" class="slideRight">
+                <img class="bottom" src="images/BC_barra.png" />
+            </div>
+            <div id="ovid-mouse" class="slideUp">
+                <img class="bottom" src="images/BC_titulo.png" />
+            </div>
+        </div>
+        <div id="bannerMovil">
+            <div id="ovid-bannerfondo">
+                <img class="bottom" src="images/BC_fondo_mobile.jpg" />
+            </div>
+            <div id="ovid-teclado" class="slideRight">
+                <img class="bottom" src="images/BC_barra_mobile.png" />
+            </div>
+            <div id="ovid-mouse" class="slideUp">
+                <img class="bottom" src="images/BC_titulo_mobile.png" />
+            </div>
+        </div>
+    </section>
+    <section class="contenido_interna">
+        <div class="miga-de-pan">
+            <div>Biblioteca Científica</div>
+        </div>
+        <div class="primera-columna">
+            <div id="menuEspecialidad">
+                <div id="dl-menu" class="dl-menuwrapper">
+        		  	<div id="cajon">BIBLIOTECA CIENTÍFICA</div>
+        			<button class="dl-trigger">Open Menu</button>
+    				<ul class="dl-menu">
+    					<li><a href="#">Actualizaciones Médicas</a></a></li>
+    					<li><a href="#">Libros de Ovid en Español</a></li>
+    				</ul>
+        		</div>
+            </div>
+            <div id='primero'>
+                <a href='#'><span>Biblioteca Científica</span></a>
+            </div>
+            <div id='cssmenu'>
+                <ul>
+                    <li class='has-sub last'><a href='#'><span>Actualizaciones Médicas</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Libros de Ovid en Español</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="columna-central">
+            <div id="bannerInferior">
+                <div id="sliderFrame">
+                    <div id="slider">
+                    
+                        <img src="images/BC_1.jpg" alt="" />
+                        <img src="images/BC_2.jpg" alt="" />
+                        <img src="images/BC_3.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <p>
+                TECNOQUÍMICAS pone a disposición de los medicos registrados en nuestro portal,
+                información médica de alta calidad. Lo invitamos a registrarse o iniciar sesión,
+                en caso de que ya se encuentre registrado, para que acceda a todos nuestros beneficios.
+                <div>
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
+                </div>
+            </p>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="footer_menu">
+            <ul>
+                <li>Home</li>
+                <li>Vademécum Tecnoquímicas</li>
+                <li>Vademécum MK</li>
+                <li>Oftalmológicos TQ</li>
+                <li>Biblioteca Científica</li>
+            </ul>
+        </div>
+        <div class="footer_somos">
+            <ul>
+                <li>Quiénes Somos</li>
+                <li>Contáctenos</li>
+            </ul>
+        </div>
+        <div class="footer_act">
+            <ul>
+                <li>Actualizar datos</li>
+            </ul>
+        </div>
+        <div class="footer_copy">
+            <ul>
+                <li>Copyright (c) 2013 Tecnoquímicas</li>
+                <li>Ingresar</li>
+                <li>Mayor información www.tecnoquimicas.com</li>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/dlmenu.js"></script>
+    <script type="text/javascript" src="js/development.js"></script>
+    <script type="text/javascript" src="js/biblioteca-cientifica.js"></script>
+    <script type="text/javascript" src="js/image-slider.js"></script>
+</body>
+</html>
