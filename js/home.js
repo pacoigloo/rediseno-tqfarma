@@ -31,10 +31,10 @@ $(window).load(function () {
 
 function actualidad(){
     var ancho_actualidad = $("#container_actualidad").width();
-    if($(window).width() >= 768){
+    if(window.innerWidth >= 768){
         $(".noticias_actualidad").css("width",(ancho_actualidad/4)-2);
         $("#tira_actualidad").css("width",ancho_actualidad*$("#tira_actualidad .grupo_noticias").length);
-    }else if($(window).width() < 768){
+    }else if(window.innerWidth < 768){
         $(".noticias_actualidad").css("width",ancho_actualidad);
         $("#tira_actualidad").css("width",($(".grupo_noticias").width()*$("#tira_actualidad .grupo_noticias").length)-ancho_actualidad+8);
     }
@@ -82,5 +82,10 @@ function alturaOvid(){
         var nuevaAltura = $(".section_ovid > img").outerHeight(true) + $(".section_ovid > .libros_ovid").outerHeight(true) + $(".section_ovid > h3").outerHeight(true);
         $(".section_ovid").css("height",nuevaAltura);
         $(".libros_ovid:first").show();
+    }
+    else
+    {
+         $(".section_ovid").css("height",'auto');
+        $(".libros_ovid:first").css('display','inline-block');
     }
 }

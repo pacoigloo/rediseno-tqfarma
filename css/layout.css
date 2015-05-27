@@ -521,7 +521,7 @@ header{
 }
 .firstLevel > li{
 	display: inline-block;
-	padding: 9.5px 0;
+	padding: 8.5px 0;
 	position: relative;
 }
 .section_menu li:hover{
@@ -551,7 +551,7 @@ header{
 .secondLevel{
 	display: none;
 	position: absolute;
-	top: 38px;
+	top: 36px;
 	/*background-color: #1E68A5;*/
 	background-color: #4295d8;
 	width: -moz-max-content;
@@ -593,6 +593,9 @@ header{
 	}
 }
 @media (min-width: 768px) and (max-width: 1024px){
+	.section_menu{
+		height: 31px;
+	}
 	.section_menu a{
 		font-size: 11px;
 		margin: 0 5px;
@@ -712,6 +715,26 @@ header{
 	max-width: 863px;
 	font-family: 'Open sans light';
 }
+.bienvenida > h1{
+	color: #2494db;
+	font-weight: normal;
+	font-size: 31px;
+	width: 58%;
+	text-align: center;
+	margin: 3vw auto 0.3vw auto;
+	max-width: 800px;
+}
+.bienvenida > h2{
+	font-weight: normal;
+	font-size: 24px;
+	width: 64%;
+	text-align: center;
+	margin: 0 auto 3vw auto;
+	color: #494949;
+	max-width: 863px;
+	font-family: 'Open sans light';
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px){
 	.presentation > h1{
@@ -719,6 +742,14 @@ header{
 		width: 80%;
 	}
 	.presentation > h2{
+		font-size: 15px;
+		width: 73%;
+	}
+	.bienvenida > h1{
+		font-size: 24px;
+		width: 80%;
+	}
+	.bienvenida > h2{
 		font-size: 15px;
 		width: 73%;
 	}
@@ -738,6 +769,13 @@ header{
 		width: 90%;;
 	}
 	.presentation > h2{
+		width: 85%;
+	}
+	.bienvenida > h1{
+		font-size: 9vw;
+		width: 90%;;
+	}
+	.bienvenida > h2{
 		width: 85%;
 	}
 }
@@ -1029,12 +1067,21 @@ footer ul > li:last-child{
 		margin-top:20px;
 		width:480px;
 	}
-	.tituloPop {
+	.titCertifica {
 	  padding-top: 20px;
 	  font-size: 17px;
-	  margin-left: 15px;
+	  margin-left: 21px;
 	  width: 460px;
 	}
+	.titNotifica {
+	  margin-left: 32px;
+	  width: 460px;
+	}
+	.titRecupera {
+	  margin-left: 64px;
+	  width: 460px;
+	}
+	
 	#subTitulo{
 		font-size:14px;
 		margin-top:0px;
@@ -1055,11 +1102,11 @@ footer ul > li:last-child{
 	  height: 70px;
 	}
 	.confirmaBtn{
-		font-size:11px;
-		width:110px;
-		height:25px;
-		margin-left:70px;
-		margin-top:20px;
+	  font-size: 12px;
+	  width: 133px;
+	  height: 34px;
+	  margin-left: 70px;
+	  margin-top: 20px;
 		
 	}
 }
@@ -1083,11 +1130,19 @@ footer ul > li:last-child{
 		font-size:12px;
 		width:290px;
 	}
-	.tituloPop {
+	.titCertifica {
 	  padding-top:8px;
 	  font-size: 15px;
 	  margin-left: 20px;
 	  width: 240px;
+	}
+	.titNotifica{
+	  padding-top: 12px;
+	  font-size: 19px;
+	}
+	.titRecupera{
+	  padding-top: 12px;
+	  font-size: 19px;
 	}
 	#subTitulo{
 		font-size:12px;
@@ -1110,6 +1165,14 @@ footer ul > li:last-child{
 	  margin-top:15px;
 	}
 }	
+
+@media (min-width: 548px) and (max-width: 640px){
+	.titRecupera {
+		  padding-top: 20px;
+		  font-size: 20px;
+		  margin-left: 40px;
+		}
+}
 @media (min-width: 320px) and (max-width: 640px){
 	#popUpRegistro{
 		width:300px;
@@ -1149,5 +1212,5 @@ footer ul > li:last-child{
 		  margin-left: 0px;
 		  width: 38px;
 		  height: 38px;
-	}	
+	}
 }
