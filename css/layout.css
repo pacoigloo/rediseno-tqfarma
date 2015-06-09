@@ -98,9 +98,11 @@ header{
 		z-index: 1001;
 	}
 	.register{
-		position: relative;
+		/*position: relative;
 		float: right;
-		display: block;
+		display: block;*/
+		position: absolute;
+		right: 0;
 	}
 }
 @media (max-width: 767px){
@@ -319,7 +321,7 @@ header{
 	text-align: center;
 	z-index: 1001;
 }
-#popUpInicio > select, #popUpInicio > input, #popUpInicio > div, #seleccionDoc, #datoId{
+#popUpInicio > select, #popUpInicio > input, #popUpInicio > div, #seleccionDoc, #datoId,.datoMail{
 	border: 1px solid #d9d9d9;
 	color: #494949/*#aea9a9*/;
 	margin-top: 2%;
@@ -363,6 +365,8 @@ header{
 	color: #a5a5a5;
 	font-family: 'Open sans';
 	padding-left: 3%;
+	width: auto;
+	display: inline-block;
 }
 #popUpInicio > .links_inicio > a:first-child{
 	padding-right: 3%;
@@ -480,6 +484,9 @@ header{
 		margin-bottom: 10px;
 		margin-top: 10px;
 	}
+	#popUpInicio > .links_inicio > a{
+		margin-bottom: 2%;
+	}
 }
 
 /****Menu superior*****/
@@ -587,6 +594,76 @@ header{
 #menu{
 	display: none;
 }
+
+/* Section Menu */
+.thirdLevel{
+	max-width:200px;
+}
+
+.thirdLevel > li > img{
+	height:7px;
+	margin-left:50%;
+	
+}
+
+.thirdLevel::-webkit-scrollbar { width: 7px; height: 7px;}
+
+.thirdLevel::-webkit-scrollbar-button {  background-color: #666; color:red; }
+
+
+
+ /* Estilos del scrollbar */
+ 
+.thirdLevel::-webkit-scrollbar{
+  	width: 7px;
+  	background: none;
+}
+.thirdLevel::-webkit-scrollbar-button{
+  	display: block;
+  	background: none;
+    border: none;
+  	
+}
+/* Turn on single button up on top, and down on bottom */
+.thirdLevel::-webkit-scrollbar-button:start:decrement,
+.thirdLevel::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+/* Turn off the down area up on top, and up area on bottom */
+.thirdLevel::-webkit-scrollbar-button:vertical:start:increment,
+.thirdLevel::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+.thirdLevel::-webkit-scrollbar:hover {
+    width: 7px; 
+}
+.thirdLevel::-webkit-scrollbar-thumb{
+	background: rgba(0,0,0,0.4);
+  	border:thin solid transparent;
+  	border-radius: 10px;
+  	-webkit-border-radius: 10px;
+}
+
+.sobraArriba{
+	position: absolute;
+	background-color: #4295d8;
+	z-index: 10;
+	top: 0;
+	/*left: 250px;
+	width: 193px;*/
+	text-align: center;
+}
+
+.sobraAbajo{
+	position: absolute;
+	background-color: #4295d8;
+	z-index: 10;
+	/*left: 250px;
+	width: 193px;*/
+	text-align: center;
+}
+
 @media (min-width: 767px){
 	.firstLevel > li:hover .secondLevel, .secondLevel > li:hover .thirdLevel{
 		display: block;
@@ -1013,9 +1090,37 @@ footer ul > li:last-child{
 #popNotifica{
 	height:60px;
 }
+#popCorreo{
+	height:60px;
+}
 #notificaContenido{
 	height:190px;
 }
+#correoContenido{
+	height:245px;
+}
+#popUpCorreo .confirmaBtn{
+	margin-top:80px;
+}
+#popUpCorreo .textoPop{
+	margin-bottom:10px;
+}
+/********Ingreso********/
+#popCertifica{
+	height:90px;
+}
+#subTitulo{
+	color:#d4e1ef;
+	font-family:'Open Sans Light';
+	font-size:18px;
+	font-weight:100;
+	margin-bottom:0px;
+	margin-top:1px;
+}
+#certificaContenido{
+	height:187px;
+}
+
 /******Registro******/
 #popUpRegistro{
 	width:600px;
@@ -1029,24 +1134,281 @@ footer ul > li:last-child{
 }
 #recuperaContenido{
 	width:580px;
+	height: 266px;
+}
+#recuperaInfo{
+	margin-top:110px;
+	margin-left:80px;
+}
+#imgTqRecu{
+	margin-top:100px;
+}
+
+#popUpCorreo .imgTq{
+	  margin-top: 70px;
+}
+@media (min-width: 540px) and (max-width: 767px){
+	.popDialog{
+		width:500px;
+	}
+	.cerrarPopUp{
+		width:40px;
+		height:41px;
+	}
+	.divTilPopUp{
+		margin-top:20px;
+		width:480px;
+	}
+	.tituloPop {
+	  padding-top: 20px;
+	  font-size: 17px;
+	  margin-left: 15px;
+	  width: 460px;
+	}
+	#popUpRegistro .tituloPop{
+	  margin-left: 37px;
+	  font-size: 24px;
+
+	}
+	#popUpNotifica .tituloPop{
+	  font-size: 24px;
+
+	}
+	#popUpCorreo .tituloPop{
+		font-size:24px;
+	}
+	#subTitulo{
+		font-size:14px;
+		margin-top:0px;
+	}
+	.contenidoPop{
+		height:110px;
+		width:480px;
+	}
+	.textoPop {
+	  font-size: 14px;
+	}
+	.panelTexto{
+		font-size:14px;
+		width:480px;
+	}
+
+	.imgTq {
+	    width: 84px;
+  		height: 84px;
+	}
+	.confirmaBtn{
+		font-size:12px;
+		width:133px;
+		height:34px;
+		margin-left:70px;
+		margin-top:20px;
+		
+	}
+	#popUpNotifica .tituloPop {
+		 padding-top: 20px;
+		 font-size: 20px;
+		 margin-left: 40px;
+	}
+	#popUpNotifica .imgTq {
+	    margin-top: 28px;
+	}	
+	#popUpCorreo .tituloPop{
+		padding-top: 20px;
+		font-size: 24px;
+		margin-left: 20px;
+	}
+	#popUpCorreo .imgTq {
+	    margin-top: 86px;
+	}
+}
+@media (min-width: 540px) and (max-width: 640px){
+	#popUpRegistro .confirmaBtn{
+		font-size:12px;
+		margin-left:70px;
+		margin-top:57px;
+	}
+}
+@media (min-width: 320px) and (max-width: 549px){
+	.popDialog{
+	    height: 220px;
+		width:300px;
+	}
+	.cerrarPopUp{
+		width:34px;
+		height:34px;
+	}
+	.divTilPopUp{
+		margin-top:12px;
+		width:290px;
+	}
+	.textoPop {
+	  font-size: 14px;
+	}
+	.panelTexto{
+		font-size:12px;
+		width:290px;
+		height: 20px;
+	}
+	.tituloPop {
+	  padding-top:8px;
+	  font-size: 15px;
+	  margin-left: 20px;
+	  width: 240px;
+	}
+	#popUpRegistro .tituloPop{
+	  padding-top: 12px;
+	  font-size: 19px;
+	}
+	#popUpNotifica .tituloPop{
+		font-size: 23px;
+  		margin-left: 36px;
+	}
+	#popUpCorreo .tituloPop{
+		font-size: 19px;
+  		margin-left: 36px;
+  		padding-top:18px;
+	}
+	#subTitulo{
+		font-size:12px;
+	}
+	.contenidoPop{
+		height:40px;
+		width:290px;
+	}
+	#certificaContenido{
+		height: 168px;
+	}
+	.datoMail{
+		margin-top:33px;
+		width:250px;
+		position: relative;
+		top: -20px;
+	}
+	.imgTq {
+	  margin-top: 50px;
+	  margin-left: 0px;
+	  width: 38px;
+	  height: 38px;
+	}
+	.confirmaBtn {
+	  font-size: 11px;
+	  width: 82px;
+	  height: 30px;
+	  margin-left: 70px;
+	  margin-top: 15px;
+	}
+	#popUpRegistro .confirmaBtn {
+	  font-size: 11px;
+	  width: 87px;
+	  height: 32px;
+	}
+	#popUpNotifica .confirmaBtn {
+	  font-size: 11px;
+	  width: 87px;
+	  height: 32px;
+	  margin-top: 39px;
+	}
+	#popUpNotifica .imgTq{
+		margin-top: 50px;
+		margin-left: 0px;
+		width: 60px;
+  		height: 60px;
+	}	
+	#popUpCertificacion .imgTq{
+		margin-top: 30px;
+		width: 60px;
+		height: 58px;
+	}
+	#popUpCorreo .confirmaBtn {
+	  font-size: 11px;
+	  width: 87px;
+	  height: 32px;
+	  margin-top: 82px;
+	}
+	#popUpCorreo .imgTq{
+		margin-top: 100px;
+		margin-left: 0px;
+		width: 60px;
+  		height: 60px;
+	}	
+}
+/*@media (min-width: 641px) and (max-width: 767px){
+	#popUpRegistro .confirmaBtn {
+	  font-size: 12px;
+	  width: 75px;
+	  height: 26px;
+	  margin-left: 70px;
+	  margin-top:15px;
+	}
+}*/
+@media (min-width: 550px) and (max-width: 640px){
+	#popUpRegistro .tituloPop {
+		  padding-top: 20px;
+		  font-size: 20px;
+		  margin-left: 40px;
+		}	
+
+}
+
+@media (min-width: 320px) and (max-width: 640px){
+	#popUpRegistro{
+		width:300px;
+	}
+	#popRecupera{
+		width:290px;
+		height:47px;
+	}
+	#popRecupera>.tituloPop{
+		width:290px;
+		
+	}
+	#panelTextoRecupera{
+		width:300px;
+	}
+	#recuperaContenido{
+		width:290px;
+		height: 186px;
+	}
+	#seleccionDoc{
+		width:250px;
+		position: relative;
+		top: -20px;
+	}
+	#datoId{
+		margin-top:6px;
+		width:250px;
+		position: relative;
+		top: -20px;
+	}
+
+	#recuperaInfo{
+		margin-top:55px;
+		margin-left:69px;
+	}
+	#imgTqRecu{
+		margin-top: 50px;
+		margin-left: 0px;
+		width: 60px;
+  		height: 60px;
+	}	
+
+}
+/******Registro******/
+/*#popUpRegistro{
+	width:600px;
+}
+#popRecupera{
+	width:580px;
+	height:60px;
+}
+#panelTextoRecupera{
+	width:600px;
+}
+#recuperaContenido{
+	width:580px;
 	height: 255px;
 }
-/*#seleccionDoc{
-	font-family:'Myriad Pro';
-	border:gray;
-	background-color:#e9e9e9;
-	width:450px;
-	height:18px;
-	
-}*/
-/*#datoId{
-	font-family:'Myriad Pro';
-	color:#e9e9e9;
-	border-color:#e9e9e9;
-	margin-top:10px;
-	width:450px;
-	height:35px;
-}*/
 #recuperaInfo{
 	margin-top:110px;
 	margin-left:80px;
@@ -1054,6 +1416,22 @@ footer ul > li:last-child{
 #imgTqRecu{
 	margin-top:90px;
 }
+
+/*** Correo ****
+#popUpCorreo{
+	width:600px;
+}
+#popUpCorreo #texto{
+	color:#494949;
+	font-family:'Open Sans';
+	font-size:22px;
+	text-align:center;
+}
+#popCorreo{
+	width:580px;
+	height:60px;
+}
+
 
 @media (min-width: 540px) and (max-width: 767px){
 	.popDialog{
@@ -1075,10 +1453,6 @@ footer ul > li:last-child{
 	}
 	.titNotifica {
 	  margin-left: 32px;
-	  width: 460px;
-	}
-	.titRecupera {
-	  margin-left: 64px;
 	  width: 460px;
 	}
 	
@@ -1110,14 +1484,14 @@ footer ul > li:last-child{
 		
 	}
 }
-@media (min-width: 320px) and (max-width: 546px){
+@media (min-width: 320px) and (max-width: 549px){
 	.popDialog{
 	    height: 220px;
 		width:300px;
 	}
 	.cerrarPopUp{
-		width:25px;
-		height:26px;
+		width:34px;
+		height:34px;
 	}
 	.divTilPopUp{
 		margin-top:12px;
@@ -1140,7 +1514,7 @@ footer ul > li:last-child{
 	  padding-top: 12px;
 	  font-size: 19px;
 	}
-	.titRecupera{
+	#popUpRegistro .tituloPop{
 	  padding-top: 12px;
 	  font-size: 19px;
 	}
@@ -1160,14 +1534,14 @@ footer ul > li:last-child{
 	.confirmaBtn {
 	  font-size: 9px;
 	  width: 75px;
-	  height: 20px;
+	  height: 26px;
 	  margin-left: 70px;
 	  margin-top:15px;
 	}
 }	
 
-@media (min-width: 548px) and (max-width: 640px){
-	.titRecupera {
+@media (min-width: 550px) and (max-width: 640px){
+	#popUpRegistro .tituloPop {
 		  padding-top: 20px;
 		  font-size: 20px;
 		  margin-left: 40px;
@@ -1183,7 +1557,6 @@ footer ul > li:last-child{
 	}
 	#popRecupera>.tituloPop{
 		width:290px;
-		
 	}
 	#panelTextoRecupera{
 		width:300px;
@@ -1213,4 +1586,12 @@ footer ul > li:last-child{
 		  width: 38px;
 		  height: 38px;
 	}
-}
+	#popCorreo{
+		width:290px;
+		height:60px;
+	}
+	#popCorreo > .tituloPop{
+		width:290px;
+	}
+	
+}*/

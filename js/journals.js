@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var offsetMenuTop = $(".section_menu").offset().top;
+    verVideo();
     $('#initSession').unbind().click(function () {
         if ($('#popUpInicio').is(':visible') && $(window).width() >= 768) {
             $('#popUpInicio').fadeOut(500);
@@ -50,6 +51,22 @@ $(function() {
 		animationClasses : { classin : 'dl-animate-in-5', classout : 'dl-animate-out-5' }
 	});
 });
+
+function verVideo(){
+    $('#botonBannerInf').on('click',function()
+    {
+        $('#contenedorBannerInf').remove();
+        $('#revistasBannerInf').remove();
+        $('#journlasBannerInf').remove();
+        $('#botonBannerInf').remove();
+        //$('#bannerInferior').appendTo($('#video'));
+        $('#bannerInferior').html('<video id="video" controls="" autoplay="" name="media">'+
+                    '<source src="http://www.tqfarma.com/mailtemplates/VIDEO/ins-journals.mp4" type="video/mp4">/video>');
+        $('#video').css('display','block');
+    });
+    
+}
+
 
 //function acomodarBotones(){
 $( window ).resize(function() {

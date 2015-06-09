@@ -65,6 +65,16 @@ $(document).ready(function () {
     if(window.innerWidth < 768){
       
     }
+    
+    
+    /* Encontramos el hover de los menus y de ahi sacamos su tamaño y si es igual al de la pantalla le damos el 80%. */
+    $(".secondLevel > li").hover( function(){
+        // Menu con scroll.
+        $(".thirdLevel").css("height", "auto");
+        
+        menusVademecums();
+    });
+    
 });
 
 function comprobarDistTop(offsetMenuTop) {
@@ -110,18 +120,18 @@ function positionLogin(){
         $($('body').children()[2]).css('margin-top',0);
     }
 }
-$(".firstLevel > li > a").click(function(){
+$(".firstLevel > li > a").click(function () {
     var active = false;
     //Verifica si el menu del click esta activo
-    if($(this).parent().children("ul.secondLevel").css("display") == "block"){
-        active = true;   
+    if ($(this).parent().children("ul.secondLevel").css("display") == "block") {
+        active = true;
     }
     //Los esconde todos
-    if($("ul.secondLevel").is(":visible")){
+    if ($("ul.secondLevel").is(":visible")) {
         $("ul.secondLevel").slideUp(500);
     }
     //Si no estaba activo antes entonces lo baja
-    if(active != true){
+    if (active != true) {
         $(this).parent().children("ul.secondLevel").slideDown(500);
     }
 });
@@ -220,4 +230,82 @@ function positionPaises(){
              $(".section_menu > ul:not('.firstLevel') > li:not('.section_menu > ul > li')").css("display","none");   
         }
     }
+}
+
+// Menus terceros
+function menusVademecums() {
+    
+    var altoMenu = $('.section_menu').height() + $('.section_menu').outerHeight(true);
+    var altoPant = $( window ).height();
+    //console.log("Pantalla: " + altoPant + ", Menu: " + altoMenu);
+    // Restamos a la pantalla el menu
+    altoPant = altoPant - altoMenu;
+    var list = altoPant - altoMenu;
+    list = list * 80/100 ;
+    var alturaLineas = $(".secondLevel > li:hover").height();
+    
+    //console.log(" Estos son los li: "+alturaLineas+" y este el alto: "+ altoPant);
+    
+        $(".thirdLevel").ready( function(){
+            flechasMenu(list);
+            //var levelThree = $(".thirdLevel li").outerHeight(true);
+            //Obtenemos el tamaño de la lista que esta visible.
+            var levelThree2 = $(".thirdLevel:visible").height();
+            
+            $(".thirdLevel:visible").scroll(function(){
+                //var offsetLi = $($(".thirdLevel:visible").children()[0]);
+                flechasMenu(list);
+            });
+            //var numElements = $(".thirdLevel li:visible").size();
+            //Verificamos si el alto del tercer menu, desde el menu, es igual al de la pantalla.
+            if( levelThree2 > altoPant){
+                // Dejamos el menu tercero con 80%.
+                $(".thirdLevel").css("height", list);
+                $(".thirdLevel").css("overflow-y", "scroll");
+                $(".thirdLevel").css("overflow-x", "none");
+            }else{
+                $(".thirdLevel").css("overflow", "hidden");
+                $(".sobraArriba").remove();
+                $(".sobraAbajo").remove();
+            }
+            var thirdOffset = 0;
+            var thirdHeight = 0;
+            if($(".thirdLevel:visible")[0]){
+                thirdOffset = $(".thirdLevel:visible").offset()['top'];
+                thirdHeight = $(".thirdLevel:visible").outerHeight();
+            }
+            //console.log("thirdOffset: "+thirdOffset);
+            //console.log("thirdHeight: "+thirdHeight);
+            if(thirdOffset + thirdHeight > $(window).height()){
+                $(".thirdLevel:visible").css("top",-(thirdHeight-($(".secondLevel:visible").outerHeight()-(thirdOffset-$(".secondLevel:visible").offset()['top']))))
+            }
+        });
+}
+
+function flechasMenu(list){
+    var offsetLi = $(".thirdLevel:visible").scrollTop();
+    if($(".thirdLevel:visible").length == 0){
+        $(".sobraArriba").remove();
+        $(".sobraAbajo").remove();
+    }
+    if(offsetLi != 0 && !$(".sobraArriba")[0]){
+        $(".thirdLevel:visible").parent().prepend("<div class='sobraArriba'><img src='images/arrow_up.png' /></div>");
+        $(".sobraArriba").css("width",parseInt($(".thirdLevel:visible").css("width"))-7);
+        $(".sobraArriba").css("left",$(".thirdLevel:visible").parent().outerWidth());
+    }else if(offsetLi == 0){
+        $(".sobraArriba").remove();
+    }
+    var visible = 0;
+    if($(".thirdLevel:visible")[0]){
+        visible = $(".thirdLevel:visible")[0].scrollHeight;
+    }
+    if(offsetLi != visible-$(".thirdLevel:visible").outerHeight()-1 && !$(".sobraAbajo")[0]){
+        $(".thirdLevel:visible").parent().prepend("<div class='sobraAbajo'><img src='images/arrow_down.png' /></div>");
+        $(".sobraAbajo").css("width",parseInt($(".thirdLevel:visible").css("width"))-7);
+        $(".sobraAbajo").css("left",$(".thirdLevel:visible").parent().outerWidth());
+        $(".sobraAbajo").css("top",list-$(".sobraAbajo").height());
+    }else if(offsetLi == visible-$(".thirdLevel:visible").outerHeight()-1){
+        $(".sobraAbajo").remove();
+    }
+    
 }

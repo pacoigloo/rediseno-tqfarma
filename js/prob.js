@@ -26,4 +26,11 @@
         $("#popUpRegistro").hide();
         $(".coverPopup").hide();
     } 
-    
+    function showDialogCorreo(){
+        $("#popUpCorreo").show();
+        $(".coverPopup").show();
+    }
+    function closeDialogCorreo() { 
+        $("#popUpCorreo").hide();
+        $(".coverPopup").hide();
+    } 

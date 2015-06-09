@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    
     actualidad();
     $("#flecha_izquierda").unbind().click(function(){
        movimiento_flechas("left");

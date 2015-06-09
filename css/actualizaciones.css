@@ -7,7 +7,7 @@
     width: 90%;
 }
 .contenido-noticia{
-    width: 68.7%;
+    width: 65.7%;
     display: inline-block;
     margin-bottom: 3vw;
     margin-right:31px;
@@ -15,7 +15,7 @@
 .menu-lateral{
     width: 28%;
     display: inline-block;
-    float: right;
+    vertical-align: top;
 }
 @media (min-width:768px) and (max-width:1060px){
 	.menu-lateral{
