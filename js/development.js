@@ -1,4 +1,5 @@
 var activeMenu = false;
+var activeLogin = false;
 var urls = [];
 
 $(document).ready(function () {
@@ -13,8 +14,10 @@ $(document).ready(function () {
         } else if (window.innerWidth >= 768){
             $('#popUpInicio').fadeIn(500);
         } else if (window.innerWidth < 768){
-            $('#popUpInicio').animate({height: "toggle"}, 500);
+                //$('#popUpInicio .links_inicio').css('margin-bottom','0px');
+                $('#popUpInicio').animate({height: "toggle"}, 500);
         }
+        
     });
     
     $('#close-popup img').unbind().click(function () {
@@ -79,7 +82,9 @@ $(document).ready(function () {
 
 function comprobarDistTop(offsetMenuTop) {
     if(window.innerWidth < 768){
-        if ($(window).scrollTop() > offsetMenuTop ) {
+        //offsetMenuTop =  parseInt($('header').css('height')) + parseInt($('header').css('margin-top'))+ parseInt($('header').css('margin-bottom'));
+        //$("#popUplogin").css('position','static');
+        if ($(window).scrollTop() > offsetMenuTop) {
             $(".section_menu").addClass("menu_fixed");
             //$("header").addClass("menu_fixed");
         } else{
@@ -88,6 +93,7 @@ function comprobarDistTop(offsetMenuTop) {
         }
     }
 }
+
 
 function topMenuChilds(){
     $(".thirdLevel").each(function(){
@@ -106,9 +112,8 @@ function positionLogin(){
         $('.section_menu').css('top',$('header').outerHeight(true));
         $($('body').children()[2]).css('margin-top',parseInt($('.section_menu').css('top'))+$('.section_menu').outerHeight(true));
     }else if(window.innerWidth < 768){
-        //Posicion login
-        $(".section_menu").append($("#popUpInicio"));
         //Menú superior
+        $(".section_menu").append($("#popUpInicio"));
         if(activeMenu == true){
             $(".section_menu > ul:not('.subPaises') > li:not('.section_menu > ul > li:first-child')").css("display","block");
         }else{
@@ -118,6 +123,7 @@ function positionLogin(){
         $('header').css('left',0);
         $('.section_menu').css('top',0);
         $($('body').children()[2]).css('margin-top',0);
+        
     }
 }
 $(".firstLevel > li > a").click(function () {
@@ -246,16 +252,16 @@ function menusVademecums() {
     
     //console.log(" Estos son los li: "+alturaLineas+" y este el alto: "+ altoPant);
     
-        $(".thirdLevel").ready( function(){
-            flechasMenu(list);
+        $(".thirdLevel:visible").ready( function(){
+            //flechasMenu(list);
             //var levelThree = $(".thirdLevel li").outerHeight(true);
             //Obtenemos el tamaño de la lista que esta visible.
             var levelThree2 = $(".thirdLevel:visible").height();
             
-            $(".thirdLevel:visible").scroll(function(){
+            /*$(".thirdLevel:visible").scroll(function(){
                 //var offsetLi = $($(".thirdLevel:visible").children()[0]);
-                flechasMenu(list);
-            });
+                //flechasMenu(list);
+            });*/
             //var numElements = $(".thirdLevel li:visible").size();
             //Verificamos si el alto del tercer menu, desde el menu, es igual al de la pantalla.
             if( levelThree2 > altoPant){
@@ -271,14 +277,20 @@ function menusVademecums() {
             var thirdOffset = 0;
             var thirdHeight = 0;
             if($(".thirdLevel:visible")[0]){
+                console.log($(".thirdLevel:visible")[0]);
                 thirdOffset = $(".thirdLevel:visible").offset()['top'];
                 thirdHeight = $(".thirdLevel:visible").outerHeight();
+                if(thirdOffset + thirdHeight > $(window).height()){
+                    $(".thirdLevel:visible").css("top",-(thirdHeight-($(".secondLevel:visible").outerHeight()-(thirdOffset-$(".secondLevel:visible").offset()['top']))));
+                    //console.log("menor: "+thirdOffset + thirdHeight+" window: "+$(window).height());
+                }else{
+                    $(".thirdLevel:visible").css("top","0");
+                    //console.log("else: "+thirdOffset + thirdHeight+" window: "+$(window).height());
+                }
             }
             //console.log("thirdOffset: "+thirdOffset);
             //console.log("thirdHeight: "+thirdHeight);
-            if(thirdOffset + thirdHeight > $(window).height()){
-                $(".thirdLevel:visible").css("top",-(thirdHeight-($(".secondLevel:visible").outerHeight()-(thirdOffset-$(".secondLevel:visible").offset()['top']))))
-            }
+            
         });
 }
 

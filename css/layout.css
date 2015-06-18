@@ -577,7 +577,7 @@ header{
 .thirdLevel{
 	display: none;
 	position: absolute;
-	top: 0;
+	/*top: 0;*/
 	/*background-color: #215D8E;*/
 	background-color: #4295d8;
 	width: -moz-max-content;
@@ -603,26 +603,20 @@ header{
 .thirdLevel > li > img{
 	height:7px;
 	margin-left:50%;
-	
 }
 
-.thirdLevel::-webkit-scrollbar { width: 7px; height: 7px;}
-
-.thirdLevel::-webkit-scrollbar-button {  background-color: #666; color:red; }
-
-
-
- /* Estilos del scrollbar */
+/* Estilos del scrollbar */
  
 .thirdLevel::-webkit-scrollbar{
   	width: 7px;
   	background: none;
+  	height: 7px;
 }
 .thirdLevel::-webkit-scrollbar-button{
   	display: block;
   	background: none;
     border: none;
-  	
+    color: red;
 }
 /* Turn on single button up on top, and down on bottom */
 .thirdLevel::-webkit-scrollbar-button:start:decrement,
