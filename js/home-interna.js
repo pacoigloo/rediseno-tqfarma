@@ -12,17 +12,20 @@ $(document).ready(function () {
         
     });
     
-    mostrarLineas();
+    //mostrarLineas();
     
     $(window).scroll(function(){
         comprobarDistTop(offsetMenuTop);
     });
     $(window).resize(function() {
         var offsetMenuTop = $(".section_menu").offset().top;
-        console.log($('#slider').width());
         var widtImg = $('#slider').width();
         $('#slider img').css('width',widtImg);
-        mostrarLineas();
+        //mostrarLineas();
+        cantCols();
+    });
+    $(window).load(function(){
+        cantCols();
     });
 
 });
@@ -42,7 +45,7 @@ $(function() {
 });
 
 
-function mostrarLineas(){
+/*function mostrarLineas(){
     if(window.innerWidth >= 910)
     {
         $('.columna-central #webTemp').css('display','block');
@@ -58,4 +61,25 @@ function mostrarLineas(){
         }
     }
     
+}*/
+
+function cantCols(){
+    if(window.innerWidth >= 768){
+        if($(".columna-central").width()/$(".lineaVadem").width() > 3){
+            $("#webTemp").append("<ul class='lineaVadem'></ul>");
+            $("#webTemp").append("<ul class='lineaVadem'></ul>");
+            var count = 0;
+            $(".lineaVadem li").each(function(index){
+                $(".lineaVadem").eq(count).append($(this));
+                if(count==2){
+                    count=0;
+                }else{
+                    count++;
+                }
+            });
+        }else{
+            $("#webTemp").append("<ul class='lineaVadem'></ul>");
+            $(".lineaVadem").eq(1).append($(".lineaVadem li:odd"));
+        }
+    }
 }
