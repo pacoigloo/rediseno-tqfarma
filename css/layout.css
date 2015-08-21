@@ -56,6 +56,7 @@ body{
 	font-family: 'Open Sans';
 	font-size: 14px;
 	overflow-x: hidden;
+	
 }
 
 /*Header*/
@@ -321,7 +322,7 @@ header{
 	text-align: center;
 	z-index: 1001;
 }
-#popUpInicio > select, #popUpInicio > input, #popUpInicio > div, #seleccionDoc, #datoId,.datoMail{
+#popUpInicio > select, #popUpInicio > input, #popUpInicio > div, #seleccionDoc, #datoId,.datoMail, .formInput{
 	border: 1px solid #d9d9d9;
 	color: #494949/*#aea9a9*/;
 	margin-top: 2%;
@@ -1073,6 +1074,311 @@ footer ul > li:last-child{
   float:right;
   
 }
+
+/***** POP UP NOTICIA TQ 2 *****/
+
+.contenedor {
+  width: 729px;
+  height:496px;
+  background-color:#FFFFFF;
+  -webkit-border-top-left-radius: 35px;
+  -moz-border-radius-topleft: 35px;
+  border-top-left-radius: 35px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.contenedor2 {
+  width: 729px;
+  height:400px;
+  background-color:#FFFFFF;
+  -webkit-border-top-left-radius: 35px;
+  -moz-border-radius-topleft: 35px;
+  border-top-left-radius: 35px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cabezote {
+  
+  width: 729px;
+  height:90px;
+  background-color: #213b62;
+  -webkit-border-top-left-radius: 35px;
+  -moz-border-radius-topleft: 35px;
+  border-top-left-radius: 35px;
+ overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.textoc {
+ 
+  width: 161px;
+  height:70px;
+  background-image:url(../images/logoNoti.png);
+  background-repeat:no-repeat;
+  margin-left:515px;
+  margin-top:12px;
+ 
+}
+
+.enviado {
+ 
+  width: 300px;
+  height:300px;
+  margin-left:0px;
+  margin-top:110px;
+  
+  
+}
+
+
+.textoc2 {
+  
+  width: 729px;
+  height:30px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:100;
+  color:#FFFFFF;
+  font-size:18px;
+  padding:0px 0px 0px 110px;
+  margin-top:-20px;
+ 
+ 
+}
+
+.imagen {
+ 
+  width: 385px;
+  background-repeat:no-repeat;
+  height:496px;
+  float:left;
+  display:block;
+  margin-top:-90px;
+
+
+}
+
+.contenido{
+  
+  width: 729px;
+  height:580px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  display:block;
+  z-index:1;
+}
+.contenido2{
+  width: 300px;
+  height:496px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px;
+  font-weight:200;
+  color:#525252;
+  display:block;
+  float:left;
+  text-align:center;
+  margin-top:-10px;
+}
+
+.ingreso{
+  width: 400px;
+  height:40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size:20px;
+  color:#000000;
+  display:block;
+  float:left;
+  margin-left:150px;
+}
+
+.ingresoboton{
+  width: 200px;
+  height:30px;
+  color:#000000;
+  display:block;
+  float:left;
+  margin-left:10px;
+  margin-top:10px;
+
+}
+
+.login-submit {
+  /* border: 1px solid #3079ed; */
+  width: 150px;
+  height:50px;
+  border: 0px;
+  color: #fff;
+  margin-left:270px;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px;
+  display:block;
+ 
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.login-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.logotq {
+  width: 88px;
+  height:99px;
+  display:block;
+  margin-left:590px;
+}
+
+.sign-up {
+  position: relative;
+  margin: 40px auto;
+  width: 300px;
+  background: white;
+  margin-right:10px;
+  font-family: 'Open Sans Light';
+}
+
+.sign-up:after {
+  bottom: 3px;
+  border-color: #dcdcdc;
+}
+
+.sign-up-title {
+  margin: -20px -30px 0px;
+  padding: 15px 25px;
+  line-height: 35px;
+  font-size: 26px;
+  font-weight: 300;
+  color: #aaa;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+  background: #f7f7f7;
+}
+
+.sign-up-title2 {
+  margin: -20px -30px 0px;
+  padding: 15px 25px;
+  line-height: 35px;
+  font-size: 32px;
+  font-weight: 300;
+  color: #43b1e8;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+  background: #f7f7f7;
+  font-family: 'Open Sans Light';
+}
+
+
+.sign-up-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top:-2px;
+  padding: 0 15px 2px;
+  font-size: 15px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
+  font-family: inherit;
+  font-weight: lighter;
+  -webkit-box-sizing: border-box;
+}
+
+.sign-up-input:focus {
+  border-color: #62c2e4;
+  outline: none;
+  -webkit-box-shadow: inset 0 -2px #62c2e4;
+  box-shadow: inset 0 -2px #62c2e4;
+}
+
+.comentarios {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 10px;
+  margin-top:-2px;
+  padding: 0 15px 2px;
+  font-size: 15px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.comentarios:focus {
+  border-color: #62c2e4;
+  outline: none;
+  -webkit-box-shadow: inset 0 -2px #62c2e4;
+  box-shadow: inset 0 -2px #62c2e4;
+}
+.lt-ie9 .sign-up-input {
+  line-height: 48px;
+}
+
+.sign-up-button {
+  position: relative;
+  vertical-align: top;
+  width: 50%;
+  height: 54px;
+  margin-top:10px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #4d90fe;
+  border: 0;
+  border-bottom: 2px solid #2665cc;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2665cc;
+  box-shadow: inset 0 -2px #2665cc;
+  
+}
+.sign-up-button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+:-moz-placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  color: #ccc;
+  opacity: 1;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/***** FIN TQ POP UP*****/
+
 /********Ingreso********/
 #popCertifica{
 	height:90px;
@@ -1148,6 +1454,9 @@ footer ul > li:last-child{
 
 #popUpCorreo .imgTq{
 	  margin-top: 70px;
+}
+#popUpRecom{
+	top: -200px;
 }
 @media (min-width: 540px) and (max-width: 767px){
 	.popDialog{
