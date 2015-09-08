@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multimedia - Tecnoquímicas Farma</title>
+    <link href="css/multimedia.css" rel="stylesheet" type="text/css">
+    <link href="css/animation.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+    	<div class="search">
+        	<input type="text">
+            <a href="#"><img src="images/buscador.png" alt="buscador"></a>
+        </div>
+        <div class="register">
+        	<a href="#">Quiénes Somos</a>
+            <a href="#">Contáctenos</a>
+            <ul id="ulPaises" class="pais">
+                <li id="defaultPais">
+                    <a href="#">País<img id="imgPaisTop" src="images/co.png" alt="colombia"/></a>
+                    <ul class="subPaises">
+                        <li class="active">
+                            <a href="#" class ="">
+                                <div class="asubPais"><img class="imgPais" src="images/co.png"/><p>Colombia</p></div>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class ="" >
+                                <div class="asubPais"><img class="imgPais" src="images/icon_ecuador.png"/><p>Ecuador</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class ="">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_elsalvador.png"/><p>El Salvador</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_guatemala.png"/><p>Guatemala</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_honduras.png"/><p>Honduras</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_nicaragua.png"/><p>Nicaragua</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_panama.png"/><p>Panama</p></div> 
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <div class="asubPais"><img class="imgPais" src="images/icon_rdcana.png"/><p>Rep. Dominicana</p></div> 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                <input class="sessionButton" type="button" id="initSession" value="Iniciar Sesión">
+                <input class="registerButton" type="button" value="Registrarse">
+            </div>
+        </div>
+        <div id="popUpInicio">
+            <select>
+                <option disabled selected>Seleccione el tipo de documento</option>
+                <option>Cédula de Ciudadanía Colombiana</option>
+                <option>Cédula de Extranjería</option>
+                <option>Documento provisional Colombiano</option>
+            </select>
+            <input type="text" placeholder="Identificación"/>
+            <input type="text" placeholder="Contraseña" />
+            <div class="boton_ingresar">Ingresar</div>
+            <div class="check_recordar"><input type="checkbox" value="">Recordar su contraseña</div>
+            <div class="links_inicio"><a href="">¿Olvido su contraseña?</a><a href="">Registrarse</a></div>
+        </div>
+    </header>
+    <section class="section_menu">
+        <ul class="firstLevel">
+            <li>
+                <a href="#">
+                    <img id="home" src="images/home.png" alt="home"/><img id="menu" src="images/menu.png" alt="menu"/>TQFarma
+                </a>
+            </li>
+            <li>
+                <a href="#">Vademécum TQ</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados Hormonales Sistemicos</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Vademécum MK</a>
+                <ul class="secondLevel">
+                    <li>
+                        <a href="#">Preparados</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 2</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">Muchisimos caracteres</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Línea 3</a>
+                        <ul class="thirdLevel">
+                            <li><a href="#">asdflkjasdh lkjfhasdlkj fhasdlkjfh aslkdj fhas</a></li>
+                            <li><a href="#">Línea 2</a></li>
+                            <li><a href="#">Línea 3</a></li>
+                            <li><a href="#">Línea 4</a></li>
+                            <li><a href="#">Línea 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Línea 4</a></li>
+                    <li><a href="#">Línea 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Oftalmológico TQ</a></li>
+            <li><a href="#">Biblioteca Científica</a></li>
+            <li><a href="#">Visita Online</a></li>
+            <li><a href="#">Red Cardiolat</a></li>
+            <li><a href="#">Espacio Otro Item</a></li>
+        </ul>
+    </section>
+    <section class="presentation">
+        <div id="bannerNormal">
+            <div class="terminos-fondo">
+                <img class="bottom" src="images/multi-img.png" />
+            </div><!--
+            <div class="slideRight terminos-barra">
+                <img class="bottom" src="images/terminos-barra.png" />
+            </div>
+            <div class="slideUp terminos-titulos">
+                <img class="bottom" src="images/terminos-titulo.png" />
+            </div>-->
+        </div>
+        <div id="bannerMovil">
+            <div class="terminos-fondo">
+                <img class="bottom" src="images/multi-img.png" />
+            </div><!--
+            <div class="slideRight terminos-barra">
+                <img class="bottom" src="images/terminos-barra-mov.png" />
+            </div>
+            <div class="slideUp terminos-titulos">
+                <img class="bottom" src="images/terminos-titulo-mov.png" />
+            </div>-->
+        </div>
+    </section>
+    <section class="multimedia">
+        <div class="miga-de-pan">
+            <div>TQFarma</div>
+            <div>/</div>
+            <div>Multimedia</div>
+        </div>
+        <div class="videoteca">
+            <div class="leftColumn">
+                <h2>Videoteca TQ</h2>
+                <img src="images/separator.png" alt="separador">
+                <ul>
+                    <li>
+                        <a href="/interna-multimedia.html#beneficios">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/video1.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Beneficios TQFarma</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>58 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/interna-multimedia.html#eptavis">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-epta.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Eptavis ®</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>58 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/interna-multimedia.html#isoklon">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-iso.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Isoklon ®</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>38 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/interna-multimedia.html#cytil">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-cytil.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Cytil ®</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>15 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/interna-multimedia.html#crema">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-derma.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Crema No.4 ®</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>58 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rightColumn">
+                <h2>Videoteca MK</h2>
+                <img src="images/separator.png" alt="separador">
+                <ul>
+                    <li>
+                        <a href="/interna-multimedia.html#equivalencias">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-mk.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Equivalencias Farmacéuticas</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>45 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/interna-multimedia.html#mk">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-mk2.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>MK® Totalmente Confiable</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>33 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/interna-multimedia.html#bioequivalencias">
+                            <div class="videos">
+                                <ul>
+                                    <li>
+                                        <div class="playV">
+                                            <img src="images/multi-bio.png"></img>
+                                            <img src="images/play-video.png" class="play"></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Bioequivalencias</h3>
+                                        <p>0 videos relacionados</p>
+                                        <h4>58 reproducciones</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_menu">
+            <ul>
+                <li>Home</li>
+                <li>Vademécum Tecnoquímicas</li>
+                <li>Vademécum MK</li>
+                <li>Oftalmológicos TQ</li>
+                <li>Biblioteca Científica</li>
+            </ul>
+        </div>
+        <div class="footer_somos">
+            <ul>
+                <li>Quiénes Somos</li>
+                <li>Contáctenos</li>
+            </ul>
+        </div>
+        <div class="footer_act">
+            <ul>
+                <li>Actualizar datos</li>
+            </ul>
+        </div>
+        <div class="footer_copy">
+            <ul>
+                <li>Copyright (c) 2013 Tecnoquímicas</li>
+                <li>Ingresar</li>
+                <li>Mayor información www.tecnoquimicas.com</li>
+            </ul>
+        </div>
+    </footer>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/development.js"></script>
+<script type="text/javascript" src="js/terminos.js"></script>
+</body>
+</html>

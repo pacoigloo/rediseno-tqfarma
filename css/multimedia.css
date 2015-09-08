@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url(layout.css);
+
+.multimedia{
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+    max-width: 948px;
+}
+.multimedia h1{
+    color: #2e8cd1;
+    font-size: 38px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: lighter;
+}
+.multimedia h2{
+    font-size: 28px;
+    color: #494949;
+    margin:0;
+}
+.multimedia h3{
+    font-family:'Open Sans Light';
+	color: #2494db;
+	font-size: 19px;
+}
+
+#bannerNormal {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 948px;
+	position: relative;
+	overflow: hidden;
+}
+#bannerMovil{
+	position: relative;
+	overflow: hidden;
+}
+.terminos-fondo img, .terminos-barra img, .terminos-titulos img{
+	width: 100%;
+}
+
+.multimedia ul{
+	list-style: none;
+    padding: 0;
+}
+
+.multimedia img{
+	width: 100%;
+}
+
+ 
+/**, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}*/
+ 
+.videoteca { position: relative; margin:0; font-family:'Open Sans';}
+
+.videos{
+	padding: 5px;
+
+}
+
+.videos ul{
+	display: -webkit-box;
+}
+.videoteca ul li a{
+	text-decoration: none;
+    color: black;
+}
+.videos img{
+	width:auto;
+	margin-right: 10px;
+}
+.videos h3 , h4 , p{
+	margin:5px;
+	font-weight:lighter;
+	margin-top:0;
+}
+.videos  h4 , p{
+     font-size: 13px;
+}
+.videos h4{
+    font-weight:bolder;
+    color:#2494db;
+       
+}
+.leftColumn { padding: 1.25em; margin-bottom: .5em;}
+ 
+.rightColumn {padding: 1.25em; }
+
+@media screen and (min-width: 825px ) {
+  .leftColumn { margin-right: 50%;  padding-left:0; }
+ 
+  .rightColumn { position: absolute; top: 0; right: 0; width: 49%;  padding-right:0;}
+    
+  .videoteca li h3{
+    max-width:21.9vw;
+}  
+}
+@media (max-width:570px){
+    .leftColumn, .rightColumn{
+        padding-left:0;
+        padding-right:0;
+    }
+    .leftColumn > ul > li ul>li:first-child,.rightColumn > ul > li ul>li:first-child{
+        width:46%;
+    }
+    .leftColumn > ul > li ul>li:last-child,.rightColumn > ul > li ul>li:last-child{
+        margin-left:10px;
+    }
+    .videos img{
+        width:100%;
+    }
+    .videos h3{
+        font-size:3.9vw;
+        margin-top:0;
+    }
+    .videos p, .videos h4{
+        font-size: 3vw;
+        
+    }
+    .videoteca li h3{
+    max-width:40vw;
+    }  
+    
+}
+
+.playV{
+	position:relative;
+	
+}
+
+.playV .play{
+	 position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    margin-left: -20px;
+    margin-top: -15px;
+
+}
+
+hr{
+	border: 1px solid #dfdfe0;
+}

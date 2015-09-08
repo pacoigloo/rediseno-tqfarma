@@ -330,7 +330,7 @@ function ubicarFooter(){
             //  +  parseInt($('footer').css('height'));
     //var win =  window.innerHeight -      
     //console.log($('.contact').css('height') +"+"+ $('header').css('height') +"+"+ $('header').css('padding-top') +"+"+ $('header').css('padding-bottom') +"+"+ $('.section_menu').css('height') +"+"+ $('footer').css('height') +"="+tam + "<" + window.innerHeight);
-    if(parseInt($('html').css('height')) < window.innerHeight)
+   /* if(parseInt($('html').css('height')) < window.innerHeight)
     {
         $('footer').css('position','absolute');
         $('footer').css('width','100%');
@@ -339,7 +339,7 @@ function ubicarFooter(){
     else
     {
         $('footer').css('position','relative');
-    }
+    }*/
 }
 
 
