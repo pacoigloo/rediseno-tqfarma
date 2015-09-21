@@ -406,13 +406,15 @@ iframe {
 	position: absolute;
 	cursor: pointer;
 	z-index: 10;
+	left: 0;
+	top: 35%;
 }
 
 #flecha_derecha_videos {
 	margin: 0;
 	position: absolute;
 	right: 0;
-	margin-top: -9%;
+	margin-top: -10%;
 	cursor: pointer;
 	z-index: 10;
 }
@@ -477,6 +479,7 @@ iframe {
 		font-size: 12px;
 		padding: 0;
 	}
+
 }
 
 @media (min-width:1081px){
@@ -593,17 +596,13 @@ iframe {
 		text-align: center;
 		display: none;
 		margin-right: 0;
+		cursor: auto;
 	}
 	.playV >img {
 		width: 70vw;
 		margin-right: 0;
 	}
-	#flecha_derecha_videos {
-		margin-top: -16%;
-	}
-	#flecha_izquierda_videos {
-		margin-top: 12%;
-	}
+
 	#tira_videos {
 		display: none;
 	}
@@ -650,6 +649,15 @@ iframe {
 	}
 	#contenedor-videos {
 		width: 90vw;
+	}
+		#flecha_derecha_videos {
+		top: 60%;
+		margin-top:0;
+	}
+	#flecha_izquierda_videos {
+		left: 0;
+		top: 60%;
+		margin-top:0;
 	}
 }
 

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $("#tira_videos_movil a:first-child .playV").show();
+    $("#tira_videos_movil > .playV:first-child").show();
     $("#flecha_izquierda_related").unbind().click(function() {
         movimiento_related("left");
     });
@@ -53,20 +53,20 @@ function movimiento_flechas(direccion) {
         }
     }
     else if (window.innerWidth < 500) {
-        var miId = $("#tira_videos_movil a .playV").filter(function() {
+        var miId = $("#tira_videos_movil  .playV").filter(function() {
             return $(this).css("display") === "block";
         });
         miId = $(miId).attr("id");
 
         miId = parseInt(miId);
         if (direccion == "right" && miId < 5) {
-            $("#tira_videos_movil a .playV:eq(" + miId + ")").fadeOut(500, function() {
+            $("#tira_videos_movil  .playV:eq(" + miId + ")").fadeOut(500, function() {
                 $("#tira_videos_movil .playV:eq(" + (miId + 1) + ")").fadeIn(500);
             });
         }
         else if (direccion == "left" && miId > 0) {
-            $("#tira_videos_movil a .playV:eq(" + miId + ")").fadeOut(500, function() {
-                $("#tira_videos_movil a .playV:eq(" + (miId - 1) + ")").fadeIn(500);
+            $("#tira_videos_movil  .playV:eq(" + miId + ")").fadeOut(500, function() {
+                $("#tira_videos_movil  .playV:eq(" + (miId - 1) + ")").fadeIn(500);
             });
         }
     }
