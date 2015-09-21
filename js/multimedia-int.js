@@ -41,7 +41,7 @@ function movimiento_flechas(direccion) {
     var anchoPlay = $(".playV").width();
     if (window.innerWidth >= 500) {
 
-        if (direccion == "right" && parseInt(right_actual) < ancho_tira / 2) {
+        if (direccion == "right" && parseInt(right_actual) < (ancho_tira / 2) - 100) {
             $("#tira_videos").animate({
                 right: "+=" + ancho_actualidad
             }, 1000);
