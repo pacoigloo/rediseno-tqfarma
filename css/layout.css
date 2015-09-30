@@ -92,19 +92,19 @@ header{
 @media (min-width: 768px){
 	header{
 		position: fixed;
-		background-color: #fff;
-		margin: 0;
-		padding: 1.5% 0;
-		top: 0;
-		z-index: 1001;
+	    background-color: #fff;
+	    margin: 0 auto;
+	    padding: 1.5% 5%;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    z-index: 1001;
 	}
-	.register{
-		/*position: relative;
-		float: right;
-		display: block;*/
-		position: absolute;
-		right: 0;
-	}
+	.register {
+    position: relative;
+    float: right;
+    display: block;
+}
 }
 @media (max-width: 767px){
 	header{

@@ -111,7 +111,7 @@ function positionLogin(){
         //Menú superior
         $(".section_menu > ul:not('.subPaises') > li:not('.section_menu > ul > li:first-child')").css("display","inline-block");
         //Fixed
-        $('header').css('left',($(window).width()-$('header').width())/2)
+       //$('header').css('left',($(window).width()-$('header').width())/2)
         $('.section_menu').css('top',$('header').outerHeight(true));
         $($('body').children()[2]).css('margin-top',parseInt($('.section_menu').css('top'))+$('.section_menu').outerHeight(true));
     }else if(window.innerWidth < 768){
@@ -123,7 +123,7 @@ function positionLogin(){
             $(".section_menu > ul:not('.subPaises') > li:not('.section_menu > ul > li:first-child')").css("display","none");   
         }
         //Fixed
-        $('header').css('left',0);
+        //$('header').css('left',0);
         $('.section_menu').css('top',0);
         $($('body').children()[2]).css('margin-top',0);
         
