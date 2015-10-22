@@ -136,3 +136,21 @@ function asignarAlturaTituloDescriptor()
         $('.ac-container label:contains(RECOMENDACIONES GENERALES:)').css('height','30px');
     }
 }
+
+
+function ubicarScroll(){
+        $("html, body").animate({
+            scrollTop: 200
+        }, 600);
+}
+
+$('#botones-desc li').click(
+    function () {
+     var hash = $('#botones-desc li').attr('href');
+     var currentUrl = window.location.href;
+     window.location.href = currentUrl + hash;
+     console.log(hash)
+     ubicarScroll();   
+    }
+    
+);

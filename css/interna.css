@@ -534,11 +534,9 @@ h1 {
 }
 .tercera-columna>.literaturas img {
     max-width: 100%;
-    margin: 0 auto;
     display: block
 }
 .tercera-columna>.literaturas p {
-    text-align: center;
     color: #999a9c
 }
 /*.info-paciente>img {
@@ -561,9 +559,7 @@ h1 {
 	position: relative;
 	margin-top: 25px;
 }
-#info-paciente > img {
-	width: 100%;
-}
+
 
 #preguntas> ul {
 	margin-top: 0;
@@ -573,9 +569,10 @@ h1 {
 #preguntas > ul {
     position: absolute;
     top: 100px;
-    left: 30px;
-    font-size: 12px;
+    left: 25px;
+    font-size: 10px;
     padding: 0;
+    max-width: 95px;
 }
 }
 #preguntas ul li {
@@ -583,9 +580,12 @@ h1 {
 }
 
 #preguntas ul li span {
-	font-size: 11px;
+	font-size: 10px;
 	font-weight: 600;
 	color: #494949;
+}
+.boton-lateral{
+    margin-top: 20px;
 }
 .botones-lat>a {
     float: left;
@@ -624,6 +624,40 @@ h1 {
     border-color: #cacaca;
     background-color: #F5F5F5
 }
+
+.btn-multimedia {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  border-color:d43f3a;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #d9534f;
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  border: solid #d10011 1px;
+  text-decoration: none;
+}
+
+.btn-multimedia:hover {
+  background: #d9534f;
+  background: #d9534f; /* Old browsers */
+  background: -moz-linear-gradient(top, #d9534f 0%, #c94c4a 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d9534f), color-stop(100%,#c94c4a)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d9534f 0%,#c94c4a 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d9534f 0%,#c94c4a 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d9534f 0%,#c94c4a 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #d9534f 0%,#c94c4a 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9534f', endColorstr='#c94c4a',GradientType=0 ); /* IE6-9 */
+  border-color:#b04340;
+  text-decoration: none;
+  color:rgba(255,255,255,1.00);
+}
 @media (min-width:1001px) and (max-width:1040px){
     .tercera-columna {
         width: 19%;
@@ -661,14 +695,11 @@ h1 {
         width: 94px;
         font-size: 11px
     }
-    #info-paciente{
-        width:150px;
-    }
-    #preguntas a {
-        font-size: 10px;
-    }
     #preguntas ul{
         top:90px;
+    }
+    #preguntas ul li span{
+        font-size:9px;
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -693,11 +724,17 @@ h1 {
     .info-paciente>ul {
         font-size: 16px
     }
+    .boton-lateral{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    }
     .botones-lat {
         width: 90%;
         margin: 0 auto;
         position: relative
     }
+    
     .botones-lat>a {
         width: 50%;
         font-size: 2.7vw;
@@ -728,8 +765,21 @@ h1 {
         width: 180px;
     }
     #preguntas ul {
-    margin-top: -97px;
+    margin-top: -123px;
     text-align: left;
+    padding: 0;
+    margin-left: 30px;
+    }
+    #preguntas ul li{
+       margin-top: 5px;
+    }
+    #preguntas ul li span{
+    font-size:13px;
+    }
+    .btn-multimedia{
+        margin-bottom: 20px;
+        font-size:21px;
+        padding: 10px 20px 10px 20px;
     }
 }
 @media (min-width: 451px) and (max-width: 767px) {
